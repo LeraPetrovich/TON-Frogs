@@ -1,0 +1,17 @@
+.menu_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  .link {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: #b9b9b9;
+    }
+    &.active {
+      color: #b9b9b9;
+    }
+  }
+}
