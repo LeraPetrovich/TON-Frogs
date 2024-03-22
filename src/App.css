@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@100;400;500;600&family=Rethink+Sans&family=Roboto&display=swap");
 
-.container {
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  padding: 100px 0px 200px 0px;
-}
 .medium_text {
   font-weight: 500;
   font-size: 26px;

@@ -4,9 +4,21 @@
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
+  max-width: 739px;
+  @media (max-width: 940px) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 19px;
+  }
   .link {
     color: white;
     text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 90%;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
     &:hover {
       color: #b9b9b9;
     }

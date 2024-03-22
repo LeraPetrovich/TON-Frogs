@@ -67,15 +67,17 @@ export const AboutUs: React.FC = () => {
         </div>
         <div className={styles.about_box}>
           <div className={styles.about_text_box}>
-            <Title text={t("whatAreTitle")} />
-            <p className={styles.about_sub_title}>
-              <span className="medium_text">{t("whatAreSubTitle")}</span>
-            </p>
-            <p className={styles.about_text}>
-              <span className="small_text">{t("whatAreText")}</span>
-            </p>
+            <div>
+              <Title text={t("whatAreTitle")} />
+              <p className={styles.about_sub_title}>
+                <span className="medium_text">{t("whatAreSubTitle")}</span>
+              </p>
+              <p className={styles.about_text}>
+                <span className="small_text">{t("whatAreText")}</span>
+              </p>
+            </div>
             <div className={styles.unit_block}>
-              <Title text="5 555 " />
+              <Title text="5 555 " className={styles.unit_text} />
               <Button
                 className={styles.about_button}
                 onClick={() => {}}
@@ -86,7 +88,6 @@ export const AboutUs: React.FC = () => {
           <img src={frogAbout} alt="frog about" />
         </div>
       </div>
-      <Footer />
     </>
   );
 };
