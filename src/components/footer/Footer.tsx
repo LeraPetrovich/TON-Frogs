@@ -65,7 +65,7 @@ export const Footer: React.FC = () => {
             <div className={styles.contact_container_icons}>
               {logosItems.map((item) => {
                 return (
-                  <a href={item.link}>
+                  <a href={item.link} key={item.id}>
                     <img src={item.icon} key={item.id} alt="icon footer" />
                   </a>
                 );

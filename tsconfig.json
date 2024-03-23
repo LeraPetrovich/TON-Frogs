@@ -22,6 +22,7 @@
   },
   "include": [
     "src",
-    "src/**/*.scss"
+    "src/**/*.scss",
+    "video.d.ts" 
   ]
 }

@@ -3,14 +3,14 @@ import styles from "./aboutAs.module.scss";
 import { useTranslation } from "react-i18next";
 import { Title } from "../../components";
 import { Button } from "../../components";
-import { Footer } from "../../components";
 
 //icons
 import GetGems from "../../assets/icons/GetGems.svg";
 import Disintar from "../../assets/icons/Disintar.svg";
 import OpenSea from "../../assets/icons/OpenSea.svg";
 import Rarible from "../../assets/icons/Rarible.svg";
-import frogAbout from "../../assets/frogAbout.png";
+import frogVideoAbout from "../../assets/video/major.mp4";
+import frogVideoAboutWeb from "../../assets/video/major.webm";
 
 const buttonItems = [
   {
@@ -85,7 +85,20 @@ export const AboutUs: React.FC = () => {
               />
             </div>
           </div>
-          <img src={frogAbout} alt="frog about" />
+          <div className={styles.media_box}>
+            <video autoPlay muted playsInline loop>
+              <source src={frogVideoAbout} type='video/mp4; codecs="hvc1"' />
+              <source src={frogVideoAboutWeb} type="video/webm" />
+            </video>
+          </div>
+          <div className={styles.unit_block_small}>
+            <Title text="5 555 " className={styles.unit_text} />
+            <Button
+              className={styles.about_button}
+              onClick={() => {}}
+              text={t("uniqueUnits")}
+            />
+          </div>
         </div>
       </div>
     </>
