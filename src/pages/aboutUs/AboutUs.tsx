@@ -9,8 +9,17 @@ import GetGems from "../../assets/icons/GetGems.svg";
 import Disintar from "../../assets/icons/Disintar.svg";
 import OpenSea from "../../assets/icons/OpenSea.svg";
 import Rarible from "../../assets/icons/Rarible.svg";
-import frogVideoAbout from "../../assets/video/major.mp4";
-import frogVideoAboutWeb from "../../assets/video/major.webm";
+
+//video mp4
+import frogVideoAbout from "../../assets/video/mp4/major.mp4";
+import joggerFrogMp4 from "../../assets/video/mp4/jogger_1_.mp4";
+import starwarsMp4 from "../../assets/video/mp4/starwars_1.mp4";
+import superfrogMp4 from "../../assets/video/mp4/superfrog_1.mp4";
+//video web
+import frogVideoAboutWeb from "../../assets/video/web/major.webm";
+import joggerFrogWeb from "../../assets/video/web/jogger_1.webm";
+import starwarsWeb from "../../assets/video/web/starwars_1.webm";
+import superfrogWeb from "../../assets/video/web/superfrog_1.webm";
 
 const buttonItems = [
   {
@@ -49,18 +58,61 @@ export const AboutUs: React.FC = () => {
                   <span className="small_text">{t("welcomeSubTitle")}</span>
                 </p>
               </div>
-              <div className={styles.button_box}>
-                {buttonItems.map((item) => {
-                  return (
-                    <Button
-                      key={item.id}
-                      className={styles.button}
-                      onClick={() => {}}
-                      text={item.text}
-                      icon={item.icon}
-                    />
-                  );
-                })}
+              <div className={styles.bottom_box_content}>
+                <div className={styles.button_box}>
+                  {buttonItems.map((item) => {
+                    return (
+                      <Button
+                        key={item.id}
+                        className={styles.button}
+                        onClick={() => {}}
+                        text={item.text}
+                        icon={item.icon}
+                      />
+                    );
+                  })}
+                </div>
+                <div className={styles.videos}>
+                  <div className={styles.welcome_vieo_box}>
+                    <div className={`${styles.video_item} ${styles.superfrog}`}>
+                      <div className={styles.video_body}>
+                        <video width="600" autoPlay muted playsInline loop>
+                          <source
+                            src={superfrogMp4}
+                            type='video/mp4; codecs="hvc1"'
+                          />
+                          <source src={superfrogWeb} type="video/webm" />
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={styles.welcome_vieo_box}>
+                    <div className={`${styles.video_item} ${styles.jogger}`}>
+                      <div className={styles.video_body}>
+                        <video width="600" autoPlay muted playsInline loop>
+                          <source
+                            src={joggerFrogMp4}
+                            type='video/mp4; codecs="hvc1"'
+                          />
+                          <source src={joggerFrogWeb} type="video/webm" />
+                        </video>
+                      </div>
+                    </div>
+                  </div>{" "}
+                  <div className={styles.welcome_vieo_box}>
+                    <div className={`${styles.video_item} ${styles.starwars}`}>
+                      <div className={styles.video_body}>
+                        <video width="600" autoPlay muted playsInline loop>
+                          <source
+                            src={starwarsMp4}
+                            type='video/mp4; codecs="hvc1"'
+                          />
+                          <source src={starwarsWeb} type="video/webm" />
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

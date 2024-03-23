@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AboutUs } from "../pages";
 import { Footer } from "../components";
 import styles from "./route.style.module.scss";
+import { Header } from "../components";
 
 const AppRouter: React.FunctionComponent = () => {
   return (
@@ -12,6 +13,7 @@ const AppRouter: React.FunctionComponent = () => {
           path="/"
           element={
             <>
+              <Header />
               <div className={styles.container}>
                 <AboutUs />
               </div>

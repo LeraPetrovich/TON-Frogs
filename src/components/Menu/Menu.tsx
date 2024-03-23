@@ -3,7 +3,11 @@ import styles from "./menu.module.scss";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 
-export const Menu: React.FC = () => {
+interface IMenu {
+  className?: string;
+}
+
+export const Menu: React.FC<IMenu> = ({ className }) => {
   const { t } = useTranslation();
   const location = useLocation();
   const menuItems = [
@@ -44,7 +48,7 @@ export const Menu: React.FC = () => {
     },
   ];
   return (
-    <div className={styles.menu_box}>
+    <div className={`${styles.menu_box} ${className || ""}`}>
       {menuItems.map((item) => (
         <Link
           key={item.id}
