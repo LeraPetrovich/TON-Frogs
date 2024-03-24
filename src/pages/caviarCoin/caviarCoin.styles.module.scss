@@ -1,0 +1,301 @@
+.caviar_coin_block {
+  margin: 0 auto;
+  max-width: 1440px;
+  overflow: hidden;
+  flex: 1;
+  padding-top: 126px;
+  padding-bottom: 250px;
+  @media (max-width: 768px) {
+    padding-top: 95px;
+    padding-bottom: 130px;
+  }
+
+  .caviar_coin_main {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    position: relative;
+    .title_block {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 23px;
+      z-index: 2;
+      padding: 0 104px;
+      @media (max-width: 940px) {
+        padding: 0px;
+        margin: 0 24px;
+      }
+      @media (max-width: 768px) {
+        gap: 26px;
+        margin: 0 17px;
+      }
+      .subtitle {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+        font-size: 46px;
+        line-height: 139%;
+        letter-spacing: -0.02em;
+        color: white;
+        @media (max-width: 768px) {
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 127%;
+        }
+      }
+    }
+    .coin_image_block {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      .coin_image {
+        z-index: 2;
+        max-width: 509px;
+        width: 100%;
+        @media (max-width: 768px) {
+          max-width: 294px;
+        }
+      }
+      .coin_bg {
+        position: absolute;
+        top: 47%;
+        transform: translateY(-47%);
+        @media (max-width: 768px) {
+          max-width: 768px;
+        }
+      }
+    }
+  }
+
+  .token_box {
+    margin-top: 130px;
+    z-index: 2;
+    display: flex;
+    gap: 50px;
+    padding: 0 104px;
+    @media (max-width: 940px) {
+      padding: 0px;
+      margin: 130px 24px 0px 24px;
+    }
+    @media (max-width: 1075px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      gap: 26px;
+      margin-top: 70px;
+      margin: 70px 17px 0px 17px;
+    }
+    .title_token {
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 110%;
+      max-width: 600px;
+
+      @media (max-width: 768px) {
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 110%;
+        text-align: center;
+      }
+    }
+    .token_subtitle {
+      max-width: 517px;
+      width: 100%;
+    }
+  }
+
+  .graph_box {
+    margin-top: 45px;
+    display: flex;
+    gap: 98px;
+    padding: 0 104px;
+    @media (max-width: 940px) {
+      padding: 0px;
+      margin: 45px 24px 0 24px;
+    }
+    @media (max-width: 768px) {
+      margin: 38px 17px 0 17px;
+    }
+    @media (max-width: 1400px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 98px;
+    }
+    .chart {
+      flex: 1 1 50%;
+      max-width: 530px;
+      width: 100%;
+      align-self: center;
+      @media (max-width: 768px) {
+        max-width: 336px;
+      }
+    }
+    .points_box {
+      flex: 1 1 50%;
+
+      .volume_box {
+        .gray_block {
+          padding: 9px 0px;
+          max-width: 154px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 156%;
+
+          @media (max-width: 768px) {
+            max-width: 140px;
+            font-size: 14px;
+            line-height: 179%;
+          }
+        }
+
+        .poin_volume_block {
+          display: flex;
+          gap: 10px;
+          margin-top: 14px;
+          @media (max-width: 768px) {
+            margin-top: 12px;
+          }
+          .poin_volume_number {
+            margin: 0;
+            font-weight: 500;
+            font-size: 90px;
+            color: #fff;
+            @media (max-width: 768px) {
+              font-size: 50px;
+            }
+          }
+          .poin_volume_text {
+            margin: 0;
+            align-self: self-end;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 108%;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            color: #dcdcdc;
+            margin-bottom: 22px;
+            @media (max-width: 768px) {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+
+      .chart_item {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @media (max-width: 768px) {
+          margin-top: 26px;
+        }
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 19px;
+          .item_circle {
+            width: 32px;
+            height: 32px;
+            border-radius: 100%;
+          }
+          .item_text {
+            margin: 0;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 200%;
+            letter-spacing: -0.02em;
+            color: #fff;
+
+            @media (max-width: 768px) {
+              font-size: 24px;
+              line-height: 175%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .form_receipt {
+    margin-top: 219px;
+    display: flex;
+    flex-direction: column;
+    gap: 78px;
+    align-items: center;
+
+    padding: 0 104px;
+    @media (max-width: 940px) {
+      padding: 0px;
+      margin: 219px 24px 0px 24px;
+    }
+    @media (max-width: 768px) {
+      margin: 130px 17px 0px 17px;
+      gap: 36px;
+    }
+    .form_receipt_title {
+      margin: 0;
+      font-weight: 400;
+      font-size: 46px;
+      line-height: 139%;
+      letter-spacing: -0.02em;
+      text-align: center;
+      color: #fff;
+      max-width: 619px;
+      width: 100%;
+      @media (max-width: 768px) {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 127%;
+        text-align: start;
+      }
+    }
+
+    .form_block {
+      max-width: 610px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .form_block_top {
+        .gray_button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .buttons_block {
+          display: flex;
+          gap: 12px;
+          margin-top: 20px;
+          @media (max-width: 768px) {
+            margin-top: 25px;
+            flex-direction: column;
+            width: 100%;
+          }
+          .button_form {
+            flex: 1 1 50%;
+            padding: 17.5px 0px;
+            border-radius: 44px;
+          }
+        }
+        .button_telegram {
+          margin-top: 68px;
+          padding: 17.5px 0px;
+          border-radius: 44px;
+          width: 100%;
+          @media (max-width: 768px) {
+            margin-top: 35px;
+          }
+        }
+      }
+    }
+  }
+}

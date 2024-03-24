@@ -70,6 +70,10 @@
           flex-direction: column;
 
           .menu_list_burger {
+            flex-direction: column;
+            justify-content: center;
+            gap: 19px;
+            align-self: center;
             a {
               font-size: 20px;
             }
@@ -106,6 +110,12 @@
       .button {
         padding: 7.5px 0px;
         width: 192px;
+        @media (max-width: 592px) {
+          width: 117px;
+          font-weight: 600;
+          font-size: 12px;
+          padding: 6.5px 0px;
+        }
       }
     }
   }

@@ -5,9 +5,10 @@ import { Link, useLocation } from "react-router-dom";
 
 interface IMenu {
   className?: string;
+  onClick?: () => void;
 }
 
-export const Menu: React.FC<IMenu> = ({ className }) => {
+export const Menu: React.FC<IMenu> = ({ className, onClick }) => {
   const { t } = useTranslation();
   const location = useLocation();
   const menuItems = [
@@ -56,6 +57,7 @@ export const Menu: React.FC<IMenu> = ({ className }) => {
           className={`${styles.link} ${
             item.link === location.pathname ? styles.active : ""
           }`}
+          onClick={onClick}
         >
           {item.text}
         </Link>

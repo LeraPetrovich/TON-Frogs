@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 940) {
+      if (window.innerWidth > 1250) {
         closeBurgerMenu();
       }
     };
@@ -70,7 +70,10 @@ export const Header: React.FC = () => {
                     className={styles.cross}
                     onClick={toggleBurgerMenu}
                   ></div>
-                  <Menu className={styles.menu_list_burger} />
+                  <Menu
+                    onClick={toggleBurgerMenu}
+                    className={styles.menu_list_burger}
+                  />
                 </div>
               )}
             </div>

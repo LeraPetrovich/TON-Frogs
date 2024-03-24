@@ -1,5 +1,9 @@
 .about_wrapper {
-  padding-top: 81px;
+  padding-top: 126px;
+  @media (max-width: 768px) {
+    padding-top: 95px;
+  }
+
   .welcome_block {
     .content_block {
       max-width: 1016px;
@@ -156,18 +160,11 @@
       .unit_text {
         font-size: 64px;
       }
-      .about_button {
-        background: linear-gradient(90deg, #222 0%, #0f0f0f 100%);
-        border-radius: 50px;
-        padding: 7px 0px;
+      .grayBlock {
         max-width: 210px;
-        width: 100%;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 178%;
-        color: #dcdcdc;
-        border-top: 1px solid #979797;
-        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
@@ -206,18 +203,12 @@
       .unit_text {
         font-size: 64px;
       }
-      .about_button {
-        background: linear-gradient(90deg, #222 0%, #0f0f0f 100%);
-        border-radius: 50px;
-        padding: 7px 0px;
+      .grayBlock {
         max-width: 210px;
-        width: 100%;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 157%;
-        color: #dcdcdc;
-        border-top: 1px solid #979797;
-        cursor: pointer;
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         align-self: center;
       }
     }

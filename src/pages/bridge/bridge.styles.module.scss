@@ -1,0 +1,98 @@
+.bridgeBox {
+  padding-top: 126px;
+  padding-bottom: 250px;
+  flex: 1;
+  @media (max-width: 768px) {
+    padding-top: 95px;
+    padding-bottom: 130px;
+  }
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  justify-content: space-between;
+  row-gap: 50px;
+
+  @media (max-width: 572px) {
+    row-gap: 26px;
+  }
+
+  @media (max-width: 1400px) {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons_box {
+    flex: 1 1 50%;
+
+    @media (max-width: 572px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: 1400px) {
+      order: 2;
+    }
+    .grayBlock {
+      display: flex;
+      align-items: center;
+      padding: 5px 0px 5px 7px;
+      gap: 16px;
+      max-width: 351px;
+      width: 100%;
+
+      @media (max-width: 768px) {
+        max-width: 327px;
+      }
+
+      .block_tag {
+        white-space: nowrap;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 156%;
+        background-color: black;
+        border-radius: 50px;
+        width: 98px;
+        height: 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      span {
+        color: #e2e2e2;
+      }
+    }
+    .button_bridge {
+      padding: 17.5px 0px;
+      max-width: 298px;
+      border-radius: 44px;
+      width: 100%;
+      margin-top: 24px;
+    }
+  }
+  .tags_block {
+    flex: 1 1 50%;
+    display: flex;
+    gap: 22px;
+
+    @media (max-width: 1400px) {
+      order: 1;
+    }
+    .tags_item {
+      flex: 1 1 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .tags_item_white {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 12px;
+        padding: 25px 0px;
+        width: 100%;
+      }
+    }
+  }
+}

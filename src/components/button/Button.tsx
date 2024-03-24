@@ -4,14 +4,16 @@ import type { IButton } from "./types";
 
 export const Button: React.FC<IButton> = ({
   text,
-  icon,
+  iconRight,
   onClick,
   className,
+  iconLeft,
 }) => {
   return (
     <button onClick={onClick} className={`${styles.button} ${className || ""}`}>
-      {icon && <img src={icon} alt="icon_button" />}
+      {iconRight && <img src={iconRight} alt="icon_button" />}
       {text}
+      {iconLeft && <img src={iconLeft} alt="icon_button" />}
     </button>
   );
 };

@@ -1,6 +1,7 @@
 interface IButton {
   text: string;
-  icon?: string;
+  iconRight?: string;
+  iconLeft?: string;
   onClick: () => void;
   className?: string;
 }

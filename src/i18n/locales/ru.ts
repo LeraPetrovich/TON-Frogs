@@ -14,4 +14,16 @@ export const ruTranslation = {
   fund: "Фонд",
   team: "Команда",
   rightsReserved: "все права защищены ©",
+  bridgeText:
+    "Bridge — Кроссчейн - моста XP.NETWORK, позволяет перемещать NFT из одной сети в другую ",
+  revealFrogsText: "ваших любимых лягушек",
+  connectBridge: "Подключить мост",
+  caviarSubTitle: "$CAVI — это утилитарный токен NFT проекта TON Frogs",
+  tokenCaviarCoinText:
+    "Токен $CAVI используется для Стейкинга NFT TON Frogs, а также может быть обменян на дополнительные продукты , предоставляемые нашим комьюнити",
+  totalVolume: "общий объем",
+  marketing: "Marketing",
+  tonFrogsFoundation: "TON Frogs Foundation",
+  formReceiptTitle:"Токены $CAVI можно получить \n через Стейкинг TON Frogs NFT",
+  dexExchanges:"или купить на DEX-биржах",
 };
