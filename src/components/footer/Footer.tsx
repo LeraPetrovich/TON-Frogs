@@ -59,7 +59,7 @@ export const Footer: React.FC = () => {
               <Menu />
             </div>
             <div className={styles.contact_container_logo}>
-              <Title text="на базе ton" className={styles.text_logo} />
+              <Title text={t("basedOnTon")} className={styles.text_logo} />
               <img src={logoFooterTon} alt="icon footer logo" />
             </div>
             <div className={styles.contact_container_icons}>

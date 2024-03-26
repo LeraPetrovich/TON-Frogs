@@ -3,6 +3,7 @@ import styles from "./header.module.scss";
 import logoFrog from "../../assets/icons/logo-footer-frog.svg";
 import { Menu } from "../Menu/Menu";
 import { Button } from "../button/Button";
+import { LanguageSwitcher } from "../languageSwitcher/LanguageSwitcher";
 import stylesGlobal from "../../router/route.style.module.scss";
 
 export const Header: React.FC = () => {
@@ -19,7 +20,7 @@ export const Header: React.FC = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 1250) {
+      if (window.innerWidth > 1440) {
         closeBurgerMenu();
       }
     };
@@ -45,9 +46,12 @@ export const Header: React.FC = () => {
   return (
     <div className={styles.header_wrapper}>
       <div className={stylesGlobal.container}>
+        <LanguageSwitcher/>
         <div className={styles.header_content}>
-          <img src={logoFrog} alt="logo" className={styles.logo} />
-          <Menu className={styles.menu} />
+          <div className={styles.header_menu}>
+            <img src={logoFrog} alt="logo" className={styles.logo} />
+            <Menu className={styles.menu} />
+          </div>
           <div className={styles.buttons_content}>
             <Button
               onClick={() => {}}

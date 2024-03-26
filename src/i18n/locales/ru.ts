@@ -24,6 +24,20 @@ export const ruTranslation = {
   totalVolume: "общий объем",
   marketing: "Marketing",
   tonFrogsFoundation: "TON Frogs Foundation",
-  formReceiptTitle:"Токены $CAVI можно получить \n через Стейкинг TON Frogs NFT",
-  dexExchanges:"или купить на DEX-биржах",
+  formReceiptTitle:
+    "Токены $CAVI можно получить \n через Стейкинг TON Frogs NFT",
+  dexExchanges: "или купить на DEX-биржах",
+  soon: "[скоро]",
+  store: "Магазин",
+  basedOnTon: "на базе ton",
+  tonFrogsFond: "Ton Frogs Фонд",
+  jointFund: "Это совместный фонд холдеров и команды TON Frogs",
+  listFondFrogsItem1:
+    "Предоставляем холдерам TON Frogs первые utilities через регулярное распределение прибыли фонда",
+  listFondFrogsItem2:
+    "Поддерживаем положительную динамику роста флора коллекции",
+  listFondFrogsItem3:
+    "Увеличиваем рекламную активность путём использования части прибыли фонда для участия в коллаборациях с другими коллекциями",
+  joinTheFund: "Вступить в фонд",
+  partner: "Партнер",
 };

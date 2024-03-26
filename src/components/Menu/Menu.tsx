@@ -3,6 +3,13 @@ import styles from "./menu.module.scss";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 
+interface IMenuItem {
+  id: number;
+  link: string;
+  text: string;
+  message?: string;
+}
+
 interface IMenu {
   className?: string;
   onClick?: () => void;
@@ -11,7 +18,7 @@ interface IMenu {
 export const Menu: React.FC<IMenu> = ({ className, onClick }) => {
   const { t } = useTranslation();
   const location = useLocation();
-  const menuItems = [
+  const menuItems: IMenuItem[] = [
     {
       id: 1,
       link: "/",
@@ -34,7 +41,7 @@ export const Menu: React.FC<IMenu> = ({ className, onClick }) => {
     },
     {
       id: 5,
-      link: "/fund",
+      link: "/fond",
       text: t("fund"),
     },
     {
@@ -44,22 +51,43 @@ export const Menu: React.FC<IMenu> = ({ className, onClick }) => {
     },
     {
       id: 7,
+      link: "/partner",
+      text: t("partner"),
+    },
+    {
+      id: 8,
       link: "/store",
-      text: "Store",
+      text: t("store"),
+      message: t("soon"),
     },
   ];
+
+  const handleItemClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (onClick) {
+      onClick();
+    }
+    const item = e.currentTarget.dataset.item;
+    if (item && menuItems[parseInt(item)].message) {
+      e.preventDefault();
+    }
+  };
+
   return (
     <div className={`${styles.menu_box} ${className || ""}`}>
-      {menuItems.map((item) => (
+      {menuItems.map((item, index) => (
         <Link
           key={item.id}
           to={item.link}
           className={`${styles.link} ${
             item.link === location.pathname ? styles.active : ""
           }`}
-          onClick={onClick}
+          data-item={index}
+          onClick={handleItemClick}
         >
           {item.text}
+          {item.message && (
+            <span className={styles.message}>{item.message}</span>
+          )}
         </Link>
       ))}
     </div>

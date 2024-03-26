@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { AboutUs, Bridge, CaviarCoin } from "../pages";
+import { AboutUs, Bridge, CaviarCoin, Fond, Team } from "../pages";
 import { Footer } from "../components";
 import styles from "./route.style.module.scss";
 import { Header } from "../components";
@@ -38,7 +38,29 @@ const AppRouter: React.FunctionComponent = () => {
           element={
             <>
               <Header />
-                <CaviarCoin />
+              <CaviarCoin />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/fond"
+          element={
+            <>
+              <Header />
+              <Fond />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/team"
+          element={
+            <>
+              <Header />
+              <div className={styles.container}>
+                <Team />
+              </div>
               <Footer />
             </>
           }

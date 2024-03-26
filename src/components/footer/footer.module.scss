@@ -82,7 +82,11 @@
           font-size: 14px;
           line-height: 140%;
           text-transform: uppercase;
-          color: #fff;
+          color: white;
+          background: none;
+          background-clip: initial;
+          -webkit-background-clip: initial;
+          -webkit-text-fill-color: initial;
         }
       }
       .link_text_footer_box {

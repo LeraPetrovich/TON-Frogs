@@ -27,4 +27,17 @@ export const enTranslation = {
   formReceiptTitle:
     "$CAVI tokens can be obtained through TON Frogs NFT Staking.",
   dexExchanges: "or buy on DEX exchanges",
+  soon: "[soon]",
+  store: "Store",
+  basedOnTon: "based on ton",
+  tonFrogsFond: "Ton Frogs Fond",
+  jointFund: "This is a joint fund of holders and the TON Frogs team",
+  listFondFrogsItem1:
+    "We provide TON Frogs holders with the first utilities through regular distribution of fund profits",
+  listFondFrogsItem2:
+    "We support the positive growth dynamics of the flora collection",
+  listFondFrogsItem3:
+    "We increase advertising activity by using part of the fund's profits to participate in collaborations with other collections",
+  joinTheFund: "Join the Fund",
+  partner: "Partner",
 };

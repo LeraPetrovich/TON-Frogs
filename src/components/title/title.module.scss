@@ -1,12 +1,15 @@
 .title {
   margin: 0;
   padding: 0;
-  font-size: 70px;
-  color: white;
-  line-height: 77px;
-  font-weight: 400;
   font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 110%;
   text-transform: uppercase;
+  background: linear-gradient(270deg, #36f5ff 0%, #0085ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   @media (max-width: 768px) {
     font-size: 36px;
