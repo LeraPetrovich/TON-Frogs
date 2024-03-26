@@ -1,0 +1,28 @@
+.switcher_box {
+  display: flex;
+
+  span {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 90%;
+  }
+
+  color: white;
+  .button_lang {
+    border: none;
+    background: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 90%;
+    color: white;
+    opacity: 0.7;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+    &.active {
+      opacity: 1;
+    }
+  }
+}

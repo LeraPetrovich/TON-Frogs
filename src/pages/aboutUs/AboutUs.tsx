@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Title, Button, GrayBlock } from "../../components";
 
 //icons
-import GetGems from "../../assets/icons/GetGems.svg";
+import GetGems from "../../assets/icons/GG.svg";
 import Disintar from "../../assets/icons/Disintar.svg";
 import OpenSea from "../../assets/icons/OpenSea.svg";
 import Rarible from "../../assets/icons/Rarible.svg";
@@ -51,7 +51,14 @@ export const AboutUs: React.FC = () => {
         <div className={styles.welcome_block}>
           <div className={styles.content_block}>
             <div className={styles.text_box}>
-              <Title text={t("welcomeTitle")} />
+              <Title
+                text={
+                  <>
+                    <span className={styles.white}>{t("welcomeTitle")}</span>{" "}
+                    <span>{t("color")}</span>
+                  </>
+                }
+              />
               <p className={styles.welcomeSubTitle}>
                 <span className="small_text">{t("welcomeSubTitle")}</span>
               </p>
@@ -118,7 +125,14 @@ export const AboutUs: React.FC = () => {
       <div className={styles.about_box}>
         <div className={styles.about_text_box}>
           <div>
-            <Title text={t("whatAreTitle")} />
+            <Title
+              text={
+                <>
+                  <span className={styles.white}>{t("whatAreTitle")}</span>{" "}
+                  <span>{t("color")} ?</span>
+                </>
+              }
+            />
             <p className={styles.about_sub_title}>
               <span className="medium_text">{t("whatAreSubTitle")}</span>
             </p>

@@ -1,5 +1,5 @@
 interface ITitle {
-  text: string;
+  text: string | JSX.Element;
   className?: string;
 }
 

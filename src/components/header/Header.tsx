@@ -46,7 +46,6 @@ export const Header: React.FC = () => {
   return (
     <div className={styles.header_wrapper}>
       <div className={stylesGlobal.container}>
-        <LanguageSwitcher/>
         <div className={styles.header_content}>
           <div className={styles.header_menu}>
             <img src={logoFrog} alt="logo" className={styles.logo} />
@@ -78,10 +77,12 @@ export const Header: React.FC = () => {
                     onClick={toggleBurgerMenu}
                     className={styles.menu_list_burger}
                   />
+                  <LanguageSwitcher className={styles.switcher_burger} />
                 </div>
               )}
             </div>
           </div>
+          <LanguageSwitcher className={styles.switcher} />
         </div>
       </div>
     </div>
