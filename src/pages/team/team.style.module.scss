@@ -1,2 +1,165 @@
 .team_wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 45px;
+  padding-bottom: 73px;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: 873px) {
+    padding-top: 95px;
+  }
+  @media (max-width: 768px) {
+    padding-bottom: 103px;
+  }
+
+  .team_title {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    background: none;
+    background-clip: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    font-weight: 400;
+    font-size: 200px;
+    line-height: 110%;
+    text-transform: uppercase;
+    @media (max-width: 1400px) {
+      font-size: 170px;
+    }
+    @media (max-width: 1200px) {
+      font-size: 150px;
+    }
+    @media (max-width: 1060px) {
+      font-size: 120px;
+    }
+    @media (max-width: 873px) {
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 110%;
+      text-transform: uppercase;
+      color: white;
+      -webkit-text-stroke: initial;
+      align-self: self-start;
+    }
+  }
+
+  .team_box {
+    margin-top: -80px;
+    @media (max-width: 1400px) {
+      margin-top: -60px;
+    }
+    @media (max-width: 1200px) {
+      margin-top: -40px;
+    }
+    @media (max-width: 1060px) {
+      margin-top: 88px;
+    }
+    max-width: 757px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 23px;
+    > :nth-last-child(-n + 3) {
+      margin-top: 67px;
+    }
+
+    @media (max-width: 798px) {
+      > :nth-last-child(-n + 3) {
+        margin-top: 0px;
+      }
+      > *:not(:first-child):not(:nth-child(2)) {
+        margin-top: 80px;
+      }
+    }
+    @media (max-width: 704px) {
+      > *:not(:first-child):not(:nth-child(2)) {
+        margin-top: 0px;
+      }
+      gap: 80px;
+    }
+
+    .team_item {
+      position: relative;
+      max-width: 235px;
+      width: 100%;
+      background: linear-gradient(
+        152.97deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+      border-radius: 7px;
+
+      @media (max-width: 768px) {
+        max-width: 324px;
+      }
+      @media (max-width: 520px) {
+        max-width: 324px;
+        background: none;
+      }
+
+      .team_body {
+        height: 240px;
+        position: relative;
+        video {
+          position: absolute;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          bottom: -35px;
+          height: 335px;
+          max-width: none;
+          @media (max-width: 520px) {
+            max-width: 335px;
+          }
+        }
+      }
+      .badge {
+        border: 1.69px solid #646464;
+        border-radius: 8px;
+        padding: 16px 0px;
+        padding-left: 21px;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 768px) {
+          background: linear-gradient(0deg, #222 0%, #0f0f0f 100%);
+          border-top: 1px solid #646464;
+          border-right: none;
+          border-bottom: none;
+          border-left: none;
+          align-items: center;
+          padding-left: 0px;
+        }
+        .badge_status {
+          font-weight: 400;
+          font-size: 11px;
+          line-height: 130%;
+          color: #aaa;
+          @media (max-width: 768px) {
+            font-size: 18px;
+            line-height: 178%;
+          }
+        }
+        .badge_name {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 130%;
+          text-transform: uppercase;
+          color: white;
+          font-family: "Dela Gothic One", sans-serif;
+          @media (max-width: 768px) {
+            font-size: 24px;
+            line-height: 133%;
+            color: #e2e2e2;
+            font-family: "Inter", sans-serif;
+            text-transform: none;
+          }
+        }
+      }
+    }
+  }
 }

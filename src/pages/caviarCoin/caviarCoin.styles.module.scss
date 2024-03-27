@@ -53,11 +53,26 @@
       width: 100%;
 
       .coin_image {
+        position: relative;
+        max-width: 883px;
+        height: 883px;
         z-index: 2;
-        max-width: 509px;
-        width: 100%;
         @media (max-width: 768px) {
-          max-width: 294px;
+          width: 480px;
+          height: 375px;
+        }
+        video {
+          position: absolute;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+          z-index: 5;
+          max-width: none;
+          @media (max-width: 768px) {
+            max-width: 433px;
+            max-height: 433px;
+          }
         }
       }
       .coin_bg {

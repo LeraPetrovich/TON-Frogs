@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./bridge.styles.module.scss";
 import { useTranslation } from "react-i18next";
 
-import { Title, GrayBlock, Button } from "../../components";
+import { Title, GrayBlock, Button, WhiteBlock } from "../../components";
 import rarible from "../../assets/icons/raribleIcon.svg";
 import openSea from "../../assets/icons/OpenSeaIcon.svg";
 
@@ -37,16 +37,7 @@ export const Bridge: React.FC = () => {
       </div>
       <div className={styles.tags_block}>
         {linksIcons.map((item, index) => {
-          return (
-            <div key={index} className={styles.tags_item}>
-              <div className={styles.tags_item_white}>
-                <div className={styles.tags_item_black}>
-                  <img src={item.icon} alt="item" />
-                </div>
-              </div>
-              <span className="medium_text">{item.text}</span>
-            </div>
-          );
+          return <WhiteBlock key={index} text={item.text} img={item.icon} />;
         })}
       </div>
     </section>

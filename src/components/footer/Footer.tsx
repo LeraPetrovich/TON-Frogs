@@ -3,7 +3,7 @@ import styles from "./footer.module.scss";
 import { useTranslation } from "react-i18next";
 import stylesGlobal from "../../router/route.style.module.scss";
 
-import { Menu } from "../Menu/Menu";
+import { Menu } from "../menu/Menu";
 
 //icons
 import youTube from "../../assets/icons/youTube.svg";

@@ -2,10 +2,11 @@ import React from "react";
 import styles from "./caviarCoin.styles.module.scss";
 import { Title, GrayBlock, Button } from "../../components";
 import { useTranslation } from "react-i18next";
-import coinImage from "../../assets/caviarCoin.png";
 import coinbg from "../../assets/backgroudCoin.svg";
 import chart from "../../assets/Frame.png";
 import telegram from "../../assets/icons/telegram_button.svg";
+import coinMp4 from "../../assets/video/mp4/coin_833.mp4";
+import coinWeb from "../../assets/video/web/coin_833.webm";
 
 export const CaviarCoin: React.FC = () => {
   const { t } = useTranslation();
@@ -45,7 +46,12 @@ export const CaviarCoin: React.FC = () => {
           <p className={styles.subtitle}>{t("caviarSubTitle")}</p>
         </div>
         <div className={styles.coin_image_block}>
-          <img src={coinImage} alt="coin image" className={styles.coin_image} />
+          <div className={styles.coin_image}>
+            <video autoPlay muted playsInline loop>
+              <source src={coinMp4} type='video/mp4; codecs="hvc1"' />
+              <source src={coinWeb} type="video/webm" />
+            </video>
+          </div>
           <img src={coinbg} alt="bg" className={styles.coin_bg} />
         </div>
       </div>

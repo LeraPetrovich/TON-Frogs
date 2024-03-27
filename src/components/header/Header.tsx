@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./header.module.scss";
 import logoFrog from "../../assets/icons/logo-footer-frog.svg";
-import { Menu } from "../Menu/Menu";
+import { Menu } from "../menu/Menu";
 import { Button } from "../button/Button";
 import { LanguageSwitcher } from "../languageSwitcher/LanguageSwitcher";
 import stylesGlobal from "../../router/route.style.module.scss";

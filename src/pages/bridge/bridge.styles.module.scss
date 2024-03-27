@@ -78,25 +78,5 @@
     @media (max-width: 1400px) {
       order: 1;
     }
-    .tags_item {
-      flex: 1 1 50%;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-
-      .tags_item_white {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: white;
-        border-radius: 12px;
-        padding: 25px 0px;
-        width: 100%;
-        box-shadow: 0 0 50px 0 #0085ff;
-        @media (max-width: 940px) {
-          box-shadow: none;
-        }
-      }
-    }
   }
 }
