@@ -3,8 +3,8 @@ import styles from "./bridge.styles.module.scss";
 import { useTranslation } from "react-i18next";
 
 import { Title, GrayBlock, Button, WhiteBlock } from "../../components";
-import rarible from "../../assets/icons/raribleIcon.svg";
-import openSea from "../../assets/icons/OpenSeaIcon.svg";
+import rarible from "../../assets/icons/Rarible.svg";
+import openSea from "../../assets/icons/OpenSea.svg";
 
 const linksIcons = [
   {

@@ -148,7 +148,7 @@ export const AboutUs: React.FC = () => {
           </div>
         </div>
         <div className={styles.media_box}>
-          <video autoPlay muted playsInline loop>
+          <video width={800} autoPlay muted playsInline loop>
             <source src={frogVideoAbout} type='video/mp4; codecs="hvc1"' />
             <source src={frogVideoAboutWeb} type="video/webm" />
           </video>

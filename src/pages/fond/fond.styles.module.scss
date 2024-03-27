@@ -171,6 +171,9 @@
           margin-top: 0px;
         }
         @media (max-width: 768px) {
+          height: 680px;
+        }
+        @media (max-width: 520px) {
           width: 100%;
           height: 478px;
         }
@@ -182,10 +185,14 @@
           transform: translateX(-50%);
           bottom: 30px;
           max-width: none;
+          width: 882px;
           @media (max-width: 1440px) {
             bottom: 0px;
           }
           @media (max-width: 768px) {
+            width: 680px;
+          }
+          @media (max-width: 520px) {
             max-width: 480px;
           }
         }

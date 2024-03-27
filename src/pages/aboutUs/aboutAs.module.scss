@@ -57,12 +57,15 @@
           z-index: 1;
           display: flex;
           .video_item {
+            position: relative;
             border-radius: 13px;
             width: 392px;
             height: 550px;
             border: 1px solid white;
-            background: url(../../assets//border_media_card_jogger.svg) center
-              no-repeat;
+            background-image: url(../../assets/blickJoger.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             -webkit-backdrop-filter: blur(4px);
             backdrop-filter: blur(4px);
 
@@ -108,7 +111,7 @@
   padding: 250px 0;
   display: flex;
   justify-content: space-between;
-  @media (max-width: 1440px) {
+  @media (max-width: 1439px) {
     flex-direction: column;
     gap: 63px;
     justify-content: center;
@@ -123,6 +126,11 @@
     gap: 64px;
     width: 100%;
     z-index: 2;
+    max-width: 621px;
+    width: 100%;
+    @media (max-width: 1439px) {
+      max-width: none;
+    }
 
     .about_sub_title {
       margin-top: 80px;
@@ -159,6 +167,11 @@
       }
       .unit_text {
         font-size: 64px;
+        color: white;
+        background: none;
+        background-clip: initial;
+        -webkit-background-clip: initial;
+        -webkit-text-fill-color: initial;
       }
       .grayBlock {
         max-width: 210px;
@@ -170,30 +183,43 @@
   }
   .media_box {
     position: relative;
-    width: 889px;
+    width: 609px;
     height: 695px;
     z-index: 1;
-    @media (max-width: 768px) {
+    margin-top: -75px;
+    @media (max-width: 1439px) {
+      margin-top: -30px;
+    }
+    @media (max-width: 758px) {
+      margin-top: -88px;
+    }
+    @media (max-width: 520px) {
       width: 480px;
       height: 375px;
-    }
-    video {
-      position: absolute;
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
-      bottom: 30px;
-      z-index: 5;
-      max-width: none;
-      @media (max-width: 1440px) {
-        bottom: 0px;
-      }
-      @media (max-width: 768px) {
-        max-width: 480px;
-      }
+      margin-top: -60px;
     }
   }
+
+  .media_box video {
+    position: absolute;
+    width: 889px;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    z-index: 5;
+    max-width: none;
+    object-fit: cover;
+    @media (max-width: 768px) {
+      width: 680px;
+    }
+    @media (max-width: 520px) {
+      max-width: 480px;
+    }
+  }
+
   .unit_block_small {
     display: none;
     @media (max-width: 768px) {
@@ -202,6 +228,11 @@
       gap: 8px;
       .unit_text {
         font-size: 64px;
+        color: white;
+        background: none;
+        background-clip: initial;
+        -webkit-background-clip: initial;
+        -webkit-text-fill-color: initial;
       }
       .grayBlock {
         max-width: 210px;
@@ -215,7 +246,7 @@
   }
 }
 
-.white{
+.white {
   color: white;
   background: none;
   background-clip: initial;
