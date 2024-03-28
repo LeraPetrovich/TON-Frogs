@@ -9,7 +9,7 @@ import starwarsMp4 from "../../assets/video/mp4/starwars_600_safari.mp4";
 import superfrogMp4 from "../../assets/video/mp4/superfrog_600_safari.mp4";
 import spacexMp4 from "../../assets/video/mp4/spacex_600_safari.mp4";
 import venomMp4 from "../../assets/video/mp4/venom_600_safari.mp4";
-import jogerMp4 from "../../assets/video/mp4/jogger_600_safari.mp4";
+import remboMp4 from "../../assets/video/mp4/rembo_600_safari.mp4";
 
 //video web
 import docWeb from "../../assets/video/web/doc_600_chrome.webm";
@@ -17,7 +17,7 @@ import starwarsWeb from "../../assets/video/web/starwars_600_chrome.webm";
 import superfrogWeb from "../../assets/video/web/superfrog_600_chrome.webm";
 import spacexWeb from "../../assets/video/web/spacex_600_chrome.webm";
 import venomWeb from "../../assets/video/web/venom_600_chrome.webm";
-import jogerWeb from "../../assets/video/web/jogger_600_chrome.webm";
+import remboWeb from "../../assets/video/web/rembo_600_chrome.webm";
 
 export const Team: React.FC = () => {
   const teamItems = [
@@ -58,8 +58,8 @@ export const Team: React.FC = () => {
     },
     {
       id: 6,
-      video_mp4: jogerMp4,
-      video_web: jogerWeb,
+      video_mp4: remboMp4,
+      video_web: remboWeb,
       status: "3D Artist",
       name: "Tatiana oliverka",
     },
