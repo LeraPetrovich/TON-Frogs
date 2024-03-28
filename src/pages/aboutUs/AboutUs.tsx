@@ -8,6 +8,7 @@ import GetGems from "../../assets/icons/GG.svg";
 import Disintar from "../../assets/icons/Disintar.svg";
 import OpenSea from "../../assets/icons/OpenSea.svg";
 import Rarible from "../../assets/icons/Rarible.svg";
+import tonFrogsLogo from "../../assets/icons/ton_frogs_logo.svg";
 
 //video mp4
 import frogVideoAbout from "../../assets/video/mp4/major_600.mp4";
@@ -78,42 +79,52 @@ export const AboutUs: React.FC = () => {
                 })}
               </div>
               <div className={styles.videos}>
-                <div className={styles.welcome_vieo_box}>
-                  <div className={`${styles.video_item} ${styles.superfrog}`}>
-                    <div className={styles.video_body}>
-                      <video width="600" autoPlay muted playsInline loop>
-                        <source
-                          src={superfrogMp4}
-                          type='video/mp4; codecs="hvc1"'
-                        />
-                        <source src={superfrogWeb} type="video/webm" />
-                      </video>
+                <div className={styles.video_item}>
+                  <div
+                    className={[styles.video_body, styles.superfrog].join(" ")}
+                  >
+                    <video width="600" autoPlay muted playsInline loop>
+                      <source
+                        src={superfrogMp4}
+                        type='video/mp4; codecs="hvc1"'
+                      />
+                      <source src={superfrogWeb} type="video/webm" />
+                    </video>
+                    <div className={styles.video_footer}>
+                      <span className={styles.footer_title}>TON Frogs</span>
+                      <img src={tonFrogsLogo} alt="Ton Frogs Logo" />
                     </div>
                   </div>
                 </div>
-                <div className={styles.welcome_vieo_box}>
-                  <div className={`${styles.video_item} ${styles.jogger}`}>
-                    <div className={styles.video_body}>
-                      <video width="600" autoPlay muted playsInline loop>
-                        <source
-                          src={joggerFrogMp4}
-                          type='video/mp4; codecs="hvc1"'
-                        />
-                        <source src={joggerFrogWeb} type="video/webm" />
-                      </video>
+                <div className={styles.video_item}>
+                  <div className={[styles.video_body, styles.jogger].join(" ")}>
+                    <video width="600" autoPlay muted playsInline loop>
+                      <source
+                        src={joggerFrogMp4}
+                        type='video/mp4; codecs="hvc1"'
+                      />
+                      <source src={joggerFrogWeb} type="video/webm" />
+                    </video>
+                    <div className={styles.video_footer}>
+                      <span className={styles.footer_title}>TON Frogs</span>
+                      <img src={tonFrogsLogo} alt="Ton Frogs Logo" />
                     </div>
                   </div>
-                </div>{" "}
-                <div className={styles.welcome_vieo_box}>
-                  <div className={`${styles.video_item} ${styles.starwars}`}>
-                    <div className={styles.video_body}>
-                      <video width="600" autoPlay muted playsInline loop>
-                        <source
-                          src={starwarsMp4}
-                          type='video/mp4; codecs="hvc1"'
-                        />
-                        <source src={starwarsWeb} type="video/webm" />
-                      </video>
+                </div>
+                <div className={styles.video_item}>
+                  <div
+                    className={[styles.video_body, styles.starwars].join(" ")}
+                  >
+                    <video width="600" autoPlay muted playsInline loop>
+                      <source
+                        src={starwarsMp4}
+                        type='video/mp4; codecs="hvc1"'
+                      />
+                      <source src={starwarsWeb} type="video/webm" />
+                    </video>
+                    <div className={styles.video_footer}>
+                      <span className={styles.footer_title}>TON Frogs</span>
+                      <img src={tonFrogsLogo} alt="Ton Frogs Logo" />
                     </div>
                   </div>
                 </div>

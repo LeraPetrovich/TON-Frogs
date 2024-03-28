@@ -6,12 +6,12 @@
 
   .welcome_block {
     .content_block {
-      max-width: 1016px;
-      width: 100%;
       display: flex;
       flex-direction: column;
       gap: 83px;
       .text_box {
+        max-width: 1016px;
+        width: 100%;
         z-index: 10;
         display: flex;
         flex-direction: column;
@@ -23,30 +23,37 @@
           gap: 26px;
         }
         .welcomeSubTitle {
-          max-width: 420px;
+          max-width: 327px;
           width: 100%;
           @media (max-width: 768px) {
             font-size: 16px;
             line-height: 137%;
+            max-width: none;
           }
         }
       }
       .bottom_box_content {
         display: flex;
-        gap: 47px;
+        gap: 101px;
+        width: 100%;
+        @media (max-width: 1200px) {
+          flex-direction: column;
+        }
         .button_box {
           z-index: 10;
           display: flex;
           flex-direction: column;
-          gap: 10px;
+          gap: 24px;
           max-width: 298px;
           width: 100%;
           @media (max-width: 768px) {
-            max-width: 100%;
             justify-content: center;
+            order: 2;
+            align-self: center;
           }
           .button {
-            padding: 10px;
+            border-radius: 44px;
+            padding: 6px 0px;
             @media (max-width: 768px) {
               font-weight: 600;
               font-size: 17px;
@@ -55,40 +62,76 @@
         }
         .videos {
           z-index: 1;
+          margin-top: -150px;
           display: flex;
+          flex: 1;
+          transition: margin-top 0.3s ease;
+          @media (max-width: 1200px) {
+            margin-top: -50px;
+            gap: 30px;
+            overflow-x: auto;
+            padding-top: 50px;
+          }
+          @media (max-width: 768px) {
+            gap: 75px;
+            padding-left: 6px;
+            order: 1;
+          }
+
           .video_item {
             position: relative;
-            border-radius: 13px;
-            width: 392px;
-            height: 550px;
-            border: 1px solid white;
-            background-image: url(../../assets/blickJoger.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            -webkit-backdrop-filter: blur(4px);
-            backdrop-filter: blur(4px);
-
-            &.starwars {
-              margin-top: -285px;
-              transform: rotate(20deg);
+            flex: 1;
+            @media (max-width: 1200px) {
+              min-width: 397px;
+              height: 550px;
             }
-
-            &.jogger {
-              margin-top: -159px;
-              margin-left: -104px;
+            @media (max-width: 768px) {
+              min-width: 322px;
+              height: 550px;
             }
-
-            &.superfrog {
-              transform: rotate(-20deg);
-              margin-top: 105px;
-              margin-left: 104px;
-            }
-
             .video_body {
-              position: relative;
-              width: 100%;
-              height: 100%;
+              position: absolute;
+              display: block;
+              border-radius: 13px;
+              width: 397px;
+              height: 550px;
+              border: 1px solid #646464;
+              border-bottom: none;
+              background-image: url(../../assets/blickJoger.png);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              -webkit-backdrop-filter: blur(4px);
+              backdrop-filter: blur(4px);
+              transition: transform 0.3s ease;
+
+              @media (max-width: 1200px) {
+                width: 100%;
+                height: 100%;
+              }
+
+              &.jogger {
+                z-index: 3;
+              }
+              &.superfrog {
+                transform: rotate(-14deg);
+                z-index: 2;
+                top: 300px;
+                @media (max-width: 1200px) {
+                  top: 0px;
+                  transform: rotate(0deg);
+                }
+              }
+
+              &.starwars {
+                transform: rotate(12deg);
+                z-index: 2;
+                top: -180px;
+                @media (max-width: 1200px) {
+                  top: 0px;
+                  transform: rotate(0deg);
+                }
+              }
 
               video {
                 position: absolute;
@@ -100,6 +143,27 @@
                 z-index: 5;
                 max-width: none;
               }
+              .video_footer {
+                position: absolute;
+                box-sizing: border-box;
+                bottom: 0;
+                border-radius: 12px;
+                background: linear-gradient(90deg, #222 0%, #0f0f0f 100%);
+                padding: 30px 32px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                border: 1px solid #646464;
+                span {
+                  font-weight: 400;
+                  font-size: 19px;
+                  line-height: 130%;
+                  text-transform: uppercase;
+                  color: white;
+                  font-family: "Dela Gothic One", sans-serif;
+                }
+              }
             }
           }
         }
@@ -108,7 +172,7 @@
   }
 }
 .about_box {
-  padding: 250px 0;
+  padding: 658px 0px 250px 0px;
   display: flex;
   justify-content: space-between;
   @media (max-width: 1439px) {
@@ -117,8 +181,11 @@
     justify-content: center;
     align-items: center;
   }
+  @media (max-width: 1200px) {
+    padding: 250px 0px 270px 0px;
+  }
   @media (max-width: 768px) {
-    padding: 250px 0;
+    padding: 99px 0px 125px 0px;
   }
   .about_text_box {
     display: flex;
