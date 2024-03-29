@@ -143,7 +143,12 @@ export const Fond: React.FC = () => {
         </div>
         <Button
           text={t("joinTheFund")}
-          onClick={() => {}}
+          onClick={() =>
+            window.open(
+              "https://getgems.io/collection/EQA8BrWceh49b2Og1fPmymjiZgh6JJ4jjz4EXK2jYEYYetOr",
+              "_blank"
+            )
+          }
           className={styles.button}
         />
       </div>
