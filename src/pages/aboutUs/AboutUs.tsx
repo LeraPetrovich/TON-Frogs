@@ -66,6 +66,7 @@ export const AboutUs: React.FC = () => {
                 {buttonItems.map((item) => {
                   return (
                     <Button
+                      key={item.id}
                       className={styles.button}
                       onClick={() => window.open(item.link, "_blank")}
                       text={item.text}

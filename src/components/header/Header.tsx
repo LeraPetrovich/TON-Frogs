@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 export const Header: React.FC = () => {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
   const burgerMenuRef = useRef<HTMLDivElement>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleBurgerMenu = () => {
     setIsBurgerMenuOpen(!isBurgerMenuOpen);
@@ -34,12 +35,25 @@ export const Header: React.FC = () => {
       }
     };
 
+    const handleScroll = () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
     document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
       window.removeEventListener("resize", handleResize);
       document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -51,7 +65,11 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <div className={styles.header_wrapper}>
+    <div
+      className={`${styles.header_wrapper} ${
+        isScrolled ? styles.scrolled : ""
+      }`}
+    >
       <div className={stylesGlobal.container}>
         <div className={styles.header_content}>
           <div className={styles.header_menu}>

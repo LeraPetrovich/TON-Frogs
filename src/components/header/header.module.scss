@@ -2,9 +2,12 @@
   position: fixed;
   width: 100%;
   z-index: 99999;
-  background-color: rgba(0, 0, 0, 0.8);
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
+  background: none;
+  &.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
   .header_content {
     position: relative;
     width: 100%;
