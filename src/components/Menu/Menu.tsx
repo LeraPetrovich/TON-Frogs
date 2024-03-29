@@ -36,7 +36,7 @@ export const Menu: React.FC<IMenu> = ({ className, onClick }) => {
     },
     {
       id: 4,
-      link: "/сaviar_сoin",
+      link: "/caviar_coin",
       text: "Caviar Coin",
     },
     {
@@ -70,6 +70,10 @@ export const Menu: React.FC<IMenu> = ({ className, onClick }) => {
     if (item && menuItems[parseInt(item)].message) {
       e.preventDefault();
     }
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (

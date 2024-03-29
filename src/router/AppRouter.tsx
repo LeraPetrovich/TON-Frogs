@@ -42,7 +42,7 @@ const AppRouter: React.FunctionComponent = () => {
           }
         />
         <Route
-          path="/сaviar_сoin"
+          path="/caviar_coin"
           element={
             <>
               <Header />

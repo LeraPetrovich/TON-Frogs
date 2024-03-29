@@ -69,7 +69,7 @@ export const Team: React.FC = () => {
 
   return (
     <section className={styles.team_wrapper}>
-      <Title text={t('team')} className={styles.team_title} />
+      <Title text={t("team")} className={styles.team_title} />
       <div className={styles.team_box}>
         {teamItems.map((item) => {
           return (

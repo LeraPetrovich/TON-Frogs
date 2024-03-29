@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./footer.module.scss";
 import { useTranslation } from "react-i18next";
 import stylesGlobal from "../../router/route.style.module.scss";
+import { Link } from "react-router-dom";
 
 import { Menu } from "../menu/Menu";
 
@@ -43,17 +44,26 @@ const logosItems = [
   },
 ];
 
+const handleClickLink = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
 export const Footer: React.FC = () => {
   const { t } = useTranslation();
   return (
     <div className={styles.footer_wrapper}>
       <div className={stylesGlobal.container}>
         <div className={styles.footer_content}>
-          <img
-            src={logoFooterFrog}
-            alt="logo footer frog"
+          <Link
+            onClick={handleClickLink}
+            to={"/"}
             className={styles.logo_footer_frog}
-          />
+          >
+            <img src={logoFooterFrog} alt="logo footer frog" />
+          </Link>
           <div className={styles.footer_content_container}>
             <div className={styles.footer_content_menu}>
               <Menu />

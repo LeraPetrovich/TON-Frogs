@@ -5,6 +5,7 @@ import { Menu } from "../menu/Menu";
 import { Button } from "../button/Button";
 import { LanguageSwitcher } from "../languageSwitcher/LanguageSwitcher";
 import stylesGlobal from "../../router/route.style.module.scss";
+import { Link } from "react-router-dom";
 
 export const Header: React.FC = () => {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
@@ -43,12 +44,21 @@ export const Header: React.FC = () => {
     };
   }, []);
 
+  const handleClickLink = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className={styles.header_wrapper}>
       <div className={stylesGlobal.container}>
         <div className={styles.header_content}>
           <div className={styles.header_menu}>
-            <img src={logoFrog} alt="logo" className={styles.logo} />
+            <Link to={"/"} onClick={handleClickLink}>
+              <img src={logoFrog} alt="logo" className={styles.logo} />
+            </Link>
             <Menu className={styles.menu} />
           </div>
           <div className={styles.buttons_content}>
