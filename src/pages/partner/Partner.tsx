@@ -1,43 +1,35 @@
 import React from "react";
 import styles from "./partner.styles.module.scss";
-import { Title, WhiteBlock } from "../../components";
 import { useTranslation } from "react-i18next";
-import TfImage from "../../assets/TF.png";
-import DefinderImage from "../../assets/Definder.png";
-import dcImg from "../../assets/icons/DC.svg";
-import dfcImg from "../../assets/icons/DFC.svg";
+import { Title } from "../../components";
+import definderMp4 from "../../assets/video/mp4/definder_600.mp4";
+import definderWebm from "../../assets/video/web/definder_600.webm";
+import { Button } from "../../components";
 
 export const Partner: React.FC = () => {
   const { t } = useTranslation();
   return (
     <section className={styles.partner_wrapper}>
-      <Title className={styles.partner_title} text={t("partner")} />
-      <div className={styles.partner_content}>
-        <div className={styles.partners_box}>
-          <div className={styles.image_box}>
-            <img src={TfImage} alt="TF" />
-            <img src={DefinderImage} alt="definder" />
-          </div>
-          <p className={styles.subTitle}>{t("partnershipAccelerates")}</p>
-        </div>
-      </div>
-      <div className={styles.definder_content}>
-        <Title
-          text={
-            <>
-              <span>DEFINDER Capital</span>{" "}
-              <span className={styles.white}>FUND (DFC)</span>
-            </>
-          }
-        />
-        <div className={styles.description_box}>
-          <span className={styles.description}>{t("dfc")}</span>
-          <div className={styles.tags_box}>
-            <WhiteBlock img={dcImg} text="DeFinder Capital" />
-            <WhiteBlock img={dfcImg} text="DFC Fund" />
+      <div className={styles.content_box}>
+        <div className={styles.text_box}>
+          <Title text={"DeFinder Capital Fund (DFC)"} />
+          <div className={styles.subtitle_box}>
+            <span className="small_text">{t("dfc")}</span>
           </div>
         </div>
+        <div className={styles.video_box}>
+          <video autoPlay muted playsInline loop>
+            <source src={definderMp4} type='video/mp4; codecs="hvc1"' />
+            <source src={definderWebm} type="video/webm" />
+          </video>
+          <div className={styles.video_bg}></div>
+        </div>
       </div>
+      <Button
+        onClick={() => window.open("https://definder.fund/", "_blank")}
+        text="Definder.fund"
+        className={styles.partner_button}
+      />
     </section>
   );
 };

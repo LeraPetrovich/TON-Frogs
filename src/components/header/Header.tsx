@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from "./header.module.scss";
 import logoFrog from "../../assets/icons/logo-footer-frog.svg";
 import { Menu } from "../menu/Menu";
-import { Button } from "../button/Button";
 import { LanguageSwitcher } from "../languageSwitcher/LanguageSwitcher";
 import stylesGlobal from "../../router/route.style.module.scss";
 import { Link } from "react-router-dom";
@@ -61,38 +60,28 @@ export const Header: React.FC = () => {
             </Link>
             <Menu className={styles.menu} />
           </div>
-          <div className={styles.buttons_content}>
-            <Button
-              onClick={() => {}}
-              text="TON Connect"
-              className={styles.button}
-            />
-            <div className={styles.header_burger}>
-              <button
-                className={styles.burger_button}
-                onClick={toggleBurgerMenu}
-                aria-label="Toggle Menu"
-              >
-                <div className={styles.burger_bar}></div>
-                <div className={styles.burger_bar}></div>
-                <div className={styles.burger_bar}></div>
-              </button>
-              {isBurgerMenuOpen && (
-                <div className={styles.burger_menu} ref={burgerMenuRef}>
-                  <div
-                    className={styles.cross}
-                    onClick={toggleBurgerMenu}
-                  ></div>
-                  <Menu
-                    onClick={toggleBurgerMenu}
-                    className={styles.menu_list_burger}
-                  />
-                  <LanguageSwitcher className={styles.switcher_burger} />
-                </div>
-              )}
-            </div>
-          </div>
           <LanguageSwitcher className={styles.switcher} />
+          <div className={styles.header_burger}>
+            <button
+              className={styles.burger_button}
+              onClick={toggleBurgerMenu}
+              aria-label="Toggle Menu"
+            >
+              <div className={styles.burger_bar}></div>
+              <div className={styles.burger_bar}></div>
+              <div className={styles.burger_bar}></div>
+            </button>
+            {isBurgerMenuOpen && (
+              <div className={styles.burger_menu} ref={burgerMenuRef}>
+                <div className={styles.cross} onClick={toggleBurgerMenu}></div>
+                <Menu
+                  onClick={toggleBurgerMenu}
+                  className={styles.menu_list_burger}
+                />
+                <LanguageSwitcher className={styles.switcher_burger} />
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

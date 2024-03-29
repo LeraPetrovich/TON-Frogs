@@ -26,7 +26,6 @@
       }
     }
     .fond_image_block {
-      position: relative;
       display: flex;
       justify-content: center;
       width: 100%;
@@ -36,11 +35,30 @@
         margin-top: 20px;
       }
 
-      .fond_image {
-        z-index: 10;
-        max-width: 1115px;
+      .videos {
+        display: flex;
+        position: relative;
         width: 100%;
+        max-width: 100%;
+        justify-content: center;
+
+        .video_body {
+          position: relative;
+          width: 90%;
+          max-width: 600px;
+
+          video {
+            width: 100%;
+            height: auto;
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+          }
+        }
       }
+
       .fond_bg {
         position: absolute;
         z-index: 2;
@@ -52,7 +70,6 @@
       }
     }
     .button {
-      margin-top: 30px;
       max-width: 298px;
       width: 100%;
       border-radius: 44px;
@@ -60,13 +77,16 @@
       z-index: 10;
       padding: 10px 104px;
       box-shadow: 0 0 15px 0 #0085ff;
+      margin-top: -17px;
       @media (max-width: 940px) {
         padding: 10px 0px;
         margin: 0 24px;
-        margin-top: 20px;
       }
       @media (max-width: 768px) {
         margin: 0 17px;
+      }
+      @media (max-width: 400px) {
+        max-width: 327px;
       }
     }
   }

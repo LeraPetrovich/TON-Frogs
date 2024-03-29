@@ -51,11 +51,15 @@
       display: flex;
       justify-content: center;
       width: 100%;
-
+      max-width: 700px;
+      height: 700px;
+      margin: 0 auto;
+      @media (max-width: 768px) {
+        max-width: 433px;
+        max-height: 433px;
+      }
       .coin_image {
         position: relative;
-        max-width: 883px;
-        height: 883px;
         z-index: 2;
         @media (max-width: 768px) {
           width: 480px;
@@ -68,7 +72,7 @@
           -ms-transform: translateX(-50%);
           transform: translateX(-50%);
           z-index: 5;
-          max-width: none;
+          max-width: 700px;
           @media (max-width: 768px) {
             max-width: 433px;
             max-height: 433px;
@@ -79,8 +83,9 @@
         position: absolute;
         top: 47%;
         transform: translateY(-47%);
+        max-width: 1200px;
         @media (max-width: 768px) {
-          max-width: 768px;
+          max-width: 700px;
         }
       }
     }
@@ -115,7 +120,6 @@
         font-weight: 400;
         font-size: 36px;
         line-height: 110%;
-        text-align: center;
       }
     }
     .token_subtitle {

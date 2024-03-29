@@ -92,7 +92,7 @@ export const Footer: React.FC = () => {
               })}
             </div>
             <div className={styles.link_text_footer_box}>
-              <span>2024 TON FROGS 3D NFT</span>
+              <span>2022—2024 TON FROGS 3D NFT</span>
               <span>{t("rightsReserved")}</span>
             </div>
           </div>

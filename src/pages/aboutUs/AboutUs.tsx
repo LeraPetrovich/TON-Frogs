@@ -5,7 +5,6 @@ import { Title, Button, GrayBlock } from "../../components";
 
 //icons
 import GetGems from "../../assets/icons/GG.svg";
-import Disintar from "../../assets/icons/Disintar.svg";
 import OpenSea from "../../assets/icons/OpenSea.svg";
 import Rarible from "../../assets/icons/Rarible.svg";
 import tonFrogsLogo from "../../assets/icons/ton_frogs_logo.svg";
@@ -27,12 +26,6 @@ const buttonItems = [
     icon: GetGems,
     text: "GetGems",
     link: "https://getgems.io/collection/EQA8BrWceh49b2Og1fPmymjiZgh6JJ4jjz4EXK2jYEYYetOr",
-  },
-  {
-    id: 2,
-    icon: Disintar,
-    text: "Disintar",
-    link: "https://beta.disintar.io/collection/UQDahyr_gPkHBPbhyrvjoHGVFGGj8vXXtL7w14AV3S2JvskA",
   },
   {
     id: 3,
