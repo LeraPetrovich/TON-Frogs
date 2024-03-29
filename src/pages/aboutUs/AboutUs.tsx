@@ -26,21 +26,25 @@ const buttonItems = [
     id: 1,
     icon: GetGems,
     text: "GetGems",
+    link: "https://getgems.io/collection/EQA8BrWceh49b2Og1fPmymjiZgh6JJ4jjz4EXK2jYEYYetOr",
   },
   {
     id: 2,
     icon: Disintar,
     text: "Disintar",
+    link: "https://beta.disintar.io/collection/UQDahyr_gPkHBPbhyrvjoHGVFGGj8vXXtL7w14AV3S2JvskA",
   },
   {
     id: 3,
     icon: OpenSea,
     text: "OpenSea",
+    link: "https://opensea.io/",
   },
   {
     id: 4,
     icon: Rarible,
     text: "Rarible",
+    link: "https://rarible.com/",
   },
 ];
 
@@ -69,9 +73,8 @@ export const AboutUs: React.FC = () => {
                 {buttonItems.map((item) => {
                   return (
                     <Button
-                      key={item.id}
                       className={styles.button}
-                      onClick={() => {}}
+                      onClick={() => window.open(item.link, "_blank")}
                       text={item.text}
                       iconRight={item.icon}
                     />
