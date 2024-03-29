@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./caviarCoin.styles.module.scss";
 import { Title, GrayBlock, Button } from "../../components";
 import { useTranslation } from "react-i18next";
@@ -9,28 +9,37 @@ import coinMp4 from "../../assets/video/mp4/coin_833.mp4";
 import coinWeb from "../../assets/video/web/coin_833.webm";
 
 export const CaviarCoin: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [linkTelegram, setLinkTelegram] = useState("");
+
+  useEffect(() => {
+    if (i18n.language === "ru") {
+      setLinkTelegram("https://t.me/tonfrogs");
+    } else {
+      setLinkTelegram("https://t.me/frogs");
+    }
+  }, [i18n.language]);
 
   const chartInformationItem = [
     {
       text: "СеХ/DeХ listing",
-      color: "#171717",
+      color: "#024873",
     },
     {
       text: "Fairlaunch",
-      color: "#383838",
+      color: "#0378a6",
     },
     {
       text: "Staking NFT TON Frogs ",
-      color: "#5b5b5b",
+      color: "#0f9bf2",
     },
     {
       text: t("team"),
-      color: "#999",
+      color: "#94e9f2",
     },
     {
       text: t("marketing"),
-      color: "#c0c0c0",
+      color: "#35f2f2",
     },
     {
       text: t("tonFrogsFoundation"),
@@ -99,19 +108,19 @@ export const CaviarCoin: React.FC = () => {
             <div className={styles.buttons_block}>
               <Button
                 className={styles.button_form}
-                onClick={() => {}}
+                onClick={() => window.open("https://dedust.io/", "_blank")}
                 text="dedust.io"
               />
               <Button
                 className={styles.button_form}
-                onClick={() => {}}
+                onClick={() => window.open("https://ston.fi/", "_blank")}
                 text="ston.fi"
               />
             </div>
             <Button
               iconLeft={telegram}
               className={styles.button_telegram}
-              onClick={() => {}}
+              onClick={() => window.open(linkTelegram, "_blank")}
               text="Telegram"
             />
           </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./footer.module.scss";
 import { useTranslation } from "react-i18next";
 import stylesGlobal from "../../router/route.style.module.scss";
@@ -16,34 +16,6 @@ import logoFooterFrog from "../../assets/icons/logo-footer-frog.svg";
 import logoFooterTon from "../../assets/icons/logo-footer-ton.svg";
 import { Title } from "../title/Title";
 
-const logosItems = [
-  {
-    id: 1,
-    link: "https://t.me/tonfrogs_en",
-    icon: telegram,
-  },
-  {
-    id: 2,
-    link: "https://twitter.com/tonfrogs",
-    icon: twitter,
-  },
-  {
-    id: 3,
-    link: "https://www.instagram.com/tonfrogs/",
-    icon: instagram,
-  },
-  {
-    id: 4,
-    link: "https://www.tiktok.com/@tonfrogs",
-    icon: tikTok,
-  },
-  {
-    id: 5,
-    link: "https://www.youtube.com/channel/UCmt13qATIZDvjol88MGfBnw",
-    icon: youTube,
-  },
-];
-
 const handleClickLink = () => {
   window.scrollTo({
     top: 0,
@@ -52,7 +24,45 @@ const handleClickLink = () => {
 };
 
 export const Footer: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [linkTelegram, setLinkTelegram] = useState("");
+
+  useEffect(() => {
+    if (i18n.language === "ru") {
+      setLinkTelegram("https://t.me/tonfrogs");
+    } else {
+      setLinkTelegram("https://t.me/frogs");
+    }
+  }, [i18n.language]);
+
+  const logosItems = [
+    {
+      id: 1,
+      link: linkTelegram,
+      icon: telegram,
+    },
+    {
+      id: 2,
+      link: "https://twitter.com/tonfrogs",
+      icon: twitter,
+    },
+    {
+      id: 3,
+      link: "https://www.instagram.com/tonfrogs/",
+      icon: instagram,
+    },
+    {
+      id: 4,
+      link: "https://www.tiktok.com/@tonfrogs",
+      icon: tikTok,
+    },
+    {
+      id: 5,
+      link: "https://www.youtube.com/channel/UCmt13qATIZDvjol88MGfBnw",
+      icon: youTube,
+    },
+  ];
+
   return (
     <div className={styles.footer_wrapper}>
       <div className={stylesGlobal.container}>

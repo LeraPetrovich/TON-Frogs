@@ -33,7 +33,12 @@ export const Fond: React.FC = () => {
           className={styles.button}
           iconRight={ggIcon}
           text="GetGems"
-          onClick={() => {}}
+          onClick={() =>
+            window.open(
+              "https://getgems.io/collection/EQA8BrWceh49b2Og1fPmymjiZgh6JJ4jjz4EXK2jYEYYetOr",
+              "_blank"
+            )
+          }
         />
       </div>
       <div className={styles.description_fond_box}>
