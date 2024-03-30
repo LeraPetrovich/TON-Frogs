@@ -25,7 +25,7 @@ const buttonItems = [
     id: 1,
     icon: GetGems,
     text: "GetGems",
-    link: "https://getgems.io/collection/EQA8BrWceh49b2Og1fPmymjiZgh6JJ4jjz4EXK2jYEYYetOr",
+    link: "https://getgems.io/tonfrogs",
   },
   {
     id: 3,

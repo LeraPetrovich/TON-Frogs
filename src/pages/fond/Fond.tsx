@@ -145,7 +145,7 @@ export const Fond: React.FC = () => {
           text={t("joinTheFund")}
           onClick={() =>
             window.open(
-              "https://getgems.io/collection/EQA8BrWceh49b2Og1fPmymjiZgh6JJ4jjz4EXK2jYEYYetOr",
+              "https://t.me/tonfrogs_bot",
               "_blank"
             )
           }
