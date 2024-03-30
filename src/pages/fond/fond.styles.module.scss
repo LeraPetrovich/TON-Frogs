@@ -15,14 +15,11 @@
     position: relative;
     .title_block {
       z-index: 10;
-      padding: 0 104px;
+      padding: 0 97px;
       align-self: center;
       @media (max-width: 940px) {
         padding: 0px;
         margin: 0 24px;
-      }
-      @media (max-width: 768px) {
-        margin: 0 17px;
       }
     }
     .fond_image_block {
@@ -75,15 +72,12 @@
       border-radius: 44px;
       align-self: center;
       z-index: 10;
-      padding: 10px 104px;
+      padding: 10px 97px;
       box-shadow: 0 0 15px 0 #0085ff;
       margin-top: -17px;
       @media (max-width: 940px) {
         padding: 10px 0px;
         margin: 0 24px;
-      }
-      @media (max-width: 768px) {
-        margin: 0 17px;
       }
       @media (max-width: 400px) {
         max-width: 327px;
@@ -93,7 +87,7 @@
   .description_fond_box {
     z-index: 10;
     margin-top: 250px;
-    padding: 0 104px;
+    padding: 0 97px;
     display: flex;
     flex-direction: column;
 
@@ -103,7 +97,6 @@
       margin-top: 250px;
     }
     @media (max-width: 768px) {
-      margin: 0 17px;
       margin-top: 130px;
     }
     .description_fond_text_box {

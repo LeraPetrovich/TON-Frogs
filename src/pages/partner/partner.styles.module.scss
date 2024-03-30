@@ -24,6 +24,24 @@
       display: flex;
       flex-direction: column;
       gap: 30px;
+      .subtitle_box {
+        position: relative;
+        padding-left: 25px;
+        box-sizing: border-box;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          width: 1px;
+          height: 74px;
+          top: 0;
+          background-color: #8c8c8c;
+
+          @media (max-width: 768px) {
+            height: 51px;
+          }
+        }
+      }
     }
     .video_box {
       position: relative;
@@ -74,5 +92,7 @@
     width: 100%;
     margin: auto;
     margin-top: 70px;
+    z-index: 10;
+    position: relative;
   }
 }

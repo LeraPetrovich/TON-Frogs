@@ -20,26 +20,11 @@
   .roadmap_list {
     display: flex;
     flex-direction: column;
-    
     flex: 1 1 50%;
-
-    &.left{
-        gap: 70px;
-    }
-
-    &.right{
-        gap: 40px;
-    }
-    &:last-child {
-      margin-top: 96px;
-    }
     .item_box {
-        display: flex;
-        align-items: center;
-
-        &.left{
-         align-self: self-end;
-        }
+      display: flex;
+      align-items: center;
+      max-width: 504px;
       .status {
         display: flex;
         align-items: center;
