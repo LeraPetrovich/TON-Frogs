@@ -6,53 +6,96 @@
   align-items: center;
   flex-direction: column;
   gap: 76px;
-}
 
-@media (max-width: 768px) {
-  .roadmap_wrapper {
+  @media (max-width: 768px) {
     padding-top: 95px;
     padding-bottom: 130px;
+    align-items: self-start;
+    gap: 73px;
   }
-}
 
-.roadmap_content {
-  display: flex;
-  .roadmap_list {
+  .title {
+    @media (max-width: 768px) {
+      align-self: self-start;
+    }
+  }
+  .roadmap_content {
     display: flex;
-    flex-direction: column;
-    flex: 1 1 50%;
-    .item_box {
+    .roadmap_list {
       display: flex;
-      align-items: center;
-      max-width: 504px;
-      .status {
+      flex-direction: column;
+      flex: 1 1 50%;
+      gap: 18px;
+      @media (max-width: 768px) {
+        gap: 18px;
+      }
+      .item_box {
         display: flex;
         align-items: center;
-        .status_box {
-          border-radius: 50px;
-          padding: 14px 0px;
-          width: 124px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background: linear-gradient(90deg, #222 0%, #0f0f0f 100%);
-          border-top: 1px solid white;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 156%;
-          color: #e2e2e2;
+        gap: 12px;
+        @media (max-width: 768px) {
+          gap: 12px;
         }
-      }
-      .road_item {
-        border-radius: 12px;
-        padding: 31px 60px;
-        background: #171717;
-        color: white;
-        font-weight: 500;
-        font-size: 32px;
-        line-height: 119%;
-        text-align: center;
-        margin: 10px;
+        .status {
+          display: flex;
+          align-items: center;
+          .status_box {
+            border-radius: 50px;
+            padding: 14px 0px;
+            width: 124px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(90deg, #222 0%, #0f0f0f 100%);
+            border-top: 1px solid white;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 156%;
+            color: #e2e2e2;
+
+            &.active {
+              box-shadow: 0 0 10px 0 #0497ff;
+              background: white;
+            }
+            @media (max-width: 768px) {
+              width: 57px;
+              padding: 5px 0px;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 156%;
+            }
+          }
+        }
+        .road_item {
+          border-radius: 12px;
+          padding: 31px 60px;
+          background: #171717;
+          box-sizing: border-box;
+          color: white;
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 119%;
+          text-align: center;
+
+          &.active {
+            box-shadow: 0 0 10px 0 #0497ff;
+          }
+          @media (max-width: 768px) {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 156%;
+            padding: 10px 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // max-width: 254px;
+            // width: 100%;
+            span {
+              max-width: 254px;
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }

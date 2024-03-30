@@ -78,9 +78,7 @@ const AppRouter: React.FunctionComponent = () => {
           element={
             <>
               <Header />
-              <div className={styles.container}>
-                <Roadmap />
-              </div>
+              <Roadmap />
               <Footer />
             </>
           }

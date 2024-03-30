@@ -12,7 +12,14 @@ export const Partner: React.FC = () => {
     <section className={styles.partner_wrapper}>
       <div className={styles.content_box}>
         <div className={styles.text_box}>
-          <Title text={"DeFinder Capital Fund (DFC)"} />
+          <Title
+            text={
+              <>
+                <span className={styles.white}>DeFinder</span>{" "}
+                <span>Capital Fund (DFC)</span>
+              </>
+            }
+          />
           <div className={styles.subtitle_box}>
             <span className="small_text">{t("dfc")}</span>
           </div>
