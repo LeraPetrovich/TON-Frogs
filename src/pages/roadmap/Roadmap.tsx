@@ -4,6 +4,7 @@ import { Title } from "../../components";
 import { useTranslation } from "react-i18next";
 import line from "../../assets/icons/line.svg";
 import styleGlobal from "../../router/route.style.module.scss";
+import romapBg from '../../assets/bg_romap.png';
 
 export const Roadmap: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -290,6 +291,11 @@ export const Roadmap: React.FC = () => {
       <section className={styles.roadmap_wrapper}>
         <Title text={t("roadMap")} className={styles.title} />
         <div className={styles.roadmap_content}>
+          <div className={styles.romap_bg_box}>
+          <img className={styles.romap_bg} src={romapBg}/>
+          <img className={styles.romap_bg} src={romapBg}/>
+          <img className={styles.romap_bg} src={romapBg}/>
+          </div>
           {screenWidth < 1440 && (
             <div className={styles.roadmap_list_small}>
               {roadItemsSmall.map((item, index) => {
