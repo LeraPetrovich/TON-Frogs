@@ -11,7 +11,7 @@
     padding-top: 95px;
     padding-bottom: 130px;
     align-items: self-start;
-    gap: 73px;
+    gap: 33px;
   }
 
   .title {
@@ -21,25 +21,211 @@
   }
   .roadmap_content {
     display: flex;
-    .roadmap_list {
+    .romap_colums {
+      display: flex;
+      gap: 125px;
+      .line {
+        flex: 1 1 17%;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 1px;
+          height: 100%;
+          background-color: #838383;
+          z-index: 1;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        @media (max-width: 1339px) {
+          display: none;
+        }
+      }
+      .roadmap_list {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        max-width: 500px;
+        @media (max-width: 1339px) {
+          display: none;
+        }
+        .item_box {
+          position: relative;
+          box-sizing: border-box;
+
+          &.item2_0_ru {
+            margin-top: 96px;
+          }
+
+          &.item1_1_ru,
+          &.item1_2_ru,
+          &.item1_12_ru,
+          &.item1_13_ru,
+          &.item2_1_ru,
+          &.item2_2_ru,
+          &.item2_3_ru,
+          &.item2_4_ru,
+          &.item2_7_ru,
+          &.item2_8_ru,
+          &.item2_9_ru,
+          &.item2_10_ru,
+          &.item2_11_ru,
+          &.item2_13_ru,
+          &.item2_12_ru {
+            margin-top: 40px;
+          }
+
+          &.item1_3_ru,
+          &.item1_6_ru,
+          &.item1_7_ru,
+          &.item1_8_ru,
+          &.item1_9_ru,
+          &.item1_11_ru,
+          &.item2_14_ru,
+          &.item2_5_ru,
+          &.item2_6_ru {
+            margin-top: 60px;
+          }
+          &.item1_4_ru,
+          &.item1_5_ru,
+          &.item1_14_ru {
+            margin-top: 70px;
+          }
+          &.item1_10_ru {
+            margin-top: 75px;
+          }
+
+          // en_version
+
+          &.item2_0_en {
+            margin-top: 96px;
+          }
+
+          &.item1_1_en,
+          &.item1_2_en,
+          &.item1_12_en,
+          &.item1_13_en,
+          &.item2_1_en,
+          &.item2_3_en,
+          &.item2_4_en,
+          &.item2_5_en,
+          &.item2_8_en,
+          &.item2_9_en,
+          &.item2_13_en {
+            margin-top: 40px;
+          }
+          &.item2_1_en,
+          &.item2_2_en,
+          &.item2_10_en {
+            margin-top: 70px;
+          }
+
+          &.item1_3_en,
+          &.item1_6_en,
+          &.item1_7_en,
+          &.item1_8_en,
+          &.item1_11_en,
+          &.item2_14_en,
+          &.item2_6_en,
+          &.item2_12_en,
+          &.item2_11_en {
+            margin-top: 60px;
+          }
+          &.item1_4_en,
+          &.item1_5_en,
+          &.item1_14_en {
+            margin-top: 70px;
+          }
+
+          &.item2_7_en,
+          &.item1_9_en {
+            margin-top: 50px;
+          }
+
+          &.item1_10_en {
+            margin-top: 75px;
+          }
+
+          .status {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+
+            &.left {
+              right: -190px;
+              display: flex;
+              align-items: center;
+              img {
+                transform: rotate(180deg);
+              }
+            }
+            &.right {
+              left: -185px;
+              display: flex;
+              align-items: center;
+            }
+
+            .status_box {
+              display: flex;
+              align-items: center;
+              border-radius: 50px;
+              padding: 14px 0px;
+              width: 124px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: linear-gradient(90deg, #222 0%, #0f0f0f 100%);
+              border-top: 1px solid white;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 156%;
+              color: #e2e2e2;
+
+              &.active {
+                box-shadow: 0 0 10px 0 #0497ff;
+                background: white;
+              }
+            }
+          }
+          .road_item {
+            border-radius: 12px;
+            padding: 31px 60px;
+            background: #171717;
+            box-sizing: border-box;
+            color: white;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 119%;
+            text-align: center;
+            width: 500px;
+
+            &.active {
+              box-shadow: 0 0 10px 0 #0497ff;
+            }
+          }
+        }
+      }
+    }
+    .roadmap_list_small {
       display: flex;
       flex-direction: column;
-      flex: 1 1 50%;
-      gap: 18px;
-      @media (max-width: 768px) {
+      flex: 1;
+
+      gap: 32px;
+      &.active {
         gap: 18px;
       }
+
       .item_box {
         display: flex;
         align-items: center;
         gap: 12px;
-        @media (max-width: 768px) {
-          gap: 12px;
-        }
+
         .status {
-          display: flex;
-          align-items: center;
           .status_box {
+            display: flex;
+            align-items: center;
             border-radius: 50px;
             padding: 14px 0px;
             width: 124px;
@@ -57,42 +243,37 @@
               box-shadow: 0 0 10px 0 #0497ff;
               background: white;
             }
-            @media (max-width: 768px) {
-              width: 57px;
-              padding: 5px 0px;
-              font-weight: 400;
-              font-size: 16px;
-              line-height: 156%;
-            }
+            width: 57px;
+            padding: 5px 0px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 156%;
           }
         }
         .road_item {
-          border-radius: 12px;
-          padding: 31px 60px;
           background: #171717;
-          box-sizing: border-box;
-          color: white;
-          font-weight: 500;
-          font-size: 32px;
-          line-height: 119%;
-          text-align: center;
-
           &.active {
             box-shadow: 0 0 10px 0 #0497ff;
           }
+          width: 100%;
+          padding: 31px 63px;
+          box-sizing: border-box;
+          border-radius: 12px;
           @media (max-width: 768px) {
+            padding: 8px 16px;
+          }
+          span {
+            max-width: 254px;
+            width: 100%;
             font-weight: 500;
-            font-size: 18px;
-            line-height: 156%;
-            padding: 10px 16px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            // max-width: 254px;
-            // width: 100%;
-            span {
-              max-width: 254px;
-              width: 100%;
+            font-size: 32px;
+            line-height: 119%;
+            text-align: center;
+            color: white;
+            @media (max-width: 768px) {
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 156%;
             }
           }
         }
