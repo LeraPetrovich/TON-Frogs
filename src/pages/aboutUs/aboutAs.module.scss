@@ -60,6 +60,10 @@
           .button {
             border-radius: 44px;
             padding: 6px 0px;
+            img {
+              max-width: 35px;
+              max-height: 35px;
+            }
             @media (max-width: 1200px) {
               flex: 1;
             }
