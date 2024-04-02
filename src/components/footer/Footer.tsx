@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <div className={styles.footer_wrapper}>
+    <footer className={styles.footer_wrapper}>
       <div className={stylesGlobal.container}>
         <div className={styles.footer_content}>
           <Link
@@ -98,6 +98,6 @@ export const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };

@@ -65,7 +65,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <div
+    <header
       className={`${styles.header_wrapper} ${
         isScrolled ? styles.scrolled : ""
       }`}
@@ -102,6 +102,6 @@ export const Header: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };

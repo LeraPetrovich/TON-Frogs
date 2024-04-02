@@ -9,9 +9,8 @@ import {
   Roadmap,
   Partner,
 } from "../pages";
-import { Footer } from "../components";
 import styles from "./route.style.module.scss";
-import { Header } from "../components";
+import { Layout } from "../layout/Layout";
 
 const AppRouter: React.FunctionComponent = () => {
   return (
@@ -20,79 +19,65 @@ const AppRouter: React.FunctionComponent = () => {
         <Route
           path="/"
           element={
-            <>
-              <Header />
+            <Layout>
               <div className={styles.container}>
                 <AboutUs />
               </div>
-              <Footer />
-            </>
+            </Layout>
           }
         />
         <Route
           path="/bridge"
           element={
-            <>
-              <Header />
+            <Layout>
               <div className={styles.container}>
                 <Bridge />
               </div>
-              <Footer />
-            </>
+            </Layout>
           }
         />
         <Route
           path="/caviar_coin"
           element={
-            <>
-              <Header />
+            <Layout>
               <CaviarCoin />
-              <Footer />
-            </>
+            </Layout>
           }
         />
         <Route
           path="/fond"
           element={
-            <>
-              <Header />
+            <Layout>
               <Fond />
-              <Footer />
-            </>
+            </Layout>
           }
         />
         <Route
           path="/team"
           element={
-            <>
-              <Header />
+            <Layout>
               <div className={styles.container}>
                 <Team />
               </div>
-              <Footer />
-            </>
+            </Layout>
           }
         />
         <Route
           path="/roadmap"
           element={
-            <>
-              <Header />
+            <Layout>
               <Roadmap />
-              <Footer />
-            </>
+            </Layout>
           }
         />
         <Route
           path="/partner"
           element={
-            <>
-              <Header />
+            <Layout>
               <div className={styles.container}>
                 <Partner />
               </div>
-              <Footer />
-            </>
+            </Layout>
           }
         />
       </Routes>
