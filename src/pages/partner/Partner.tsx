@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./partner.styles.module.scss";
+import styles from "./partner.module.scss";
 import { useTranslation } from "react-i18next";
 import { Title } from "../../components";
 import definderMp4 from "../../assets/video/mp4/definder_600.mp4";

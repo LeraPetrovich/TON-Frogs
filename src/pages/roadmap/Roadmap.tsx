@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import styles from "./roadmap.styles.module.scss";
+import styles from "./roadmap.module.scss";
 import { Title } from "../../components";
 import { useTranslation } from "react-i18next";
-import styleGlobal from "../../router/route.style.module.scss";
+import styleGlobal from "../../router/route.module.scss";
 import romapBg from "../../assets/bg_romap.png";
 
 export const Roadmap: React.FC = () => {

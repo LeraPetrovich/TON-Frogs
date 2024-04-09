@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./bridge.styles.module.scss";
+import styles from "./bridge.module.scss";
 import { useTranslation } from "react-i18next";
 
 import { Title, GrayBlock, Button, WhiteBlock } from "../../components";

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import styles from "./fond.styles.module.scss";
+import styles from "./fond.module.scss";
 import { Title, Button } from "../../components";
 import { useTranslation } from "react-i18next";
 

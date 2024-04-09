@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./whiteBlock.styles.module.scss";
+import styles from "./whiteBlock.module.scss";
 import type { IWhiteBlock } from "./types";
 
 export const WhiteBlock: React.FC<IWhiteBlock> = ({ img, text }) => {

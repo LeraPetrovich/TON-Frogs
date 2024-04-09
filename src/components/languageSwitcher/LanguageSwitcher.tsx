@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { saveLanguageToLocalStorage } from "../../i18n";
-import styles from "./languageSwitcher.styles.module.scss";
+import styles from "./languageSwitcher.module.scss";
 
 export const LanguageSwitcher: React.FC<{ className?: string }> = ({
   className,

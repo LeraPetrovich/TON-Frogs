@@ -3,7 +3,7 @@ import styles from "./header.module.scss";
 import logoFrog from "../../assets/icons/logo-footer-frog.svg";
 import { Menu } from "../menu/Menu";
 import { LanguageSwitcher } from "../languageSwitcher/LanguageSwitcher";
-import stylesGlobal from "../../router/route.style.module.scss";
+import stylesGlobal from "../../router/route.module.scss";
 import { Link } from "react-router-dom";
 
 export const Header: React.FC = () => {

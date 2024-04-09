@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./footer.module.scss";
 import { useTranslation } from "react-i18next";
-import stylesGlobal from "../../router/route.style.module.scss";
+import stylesGlobal from "../../router/route.module.scss";
 import { Link } from "react-router-dom";
 
 import { Menu } from "../menu/Menu";

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./team.style.module.scss";
+import styles from "./team.module.scss";
 import { Title } from "../../components";
 import { useTranslation } from "react-i18next";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./grayBlock.styles.module.scss";
+import styles from "./grayBlock.module.scss";
 
 interface GrayBlockProps {
   children: React.ReactNode;

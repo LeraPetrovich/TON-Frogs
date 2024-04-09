@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./caviarCoin.styles.module.scss";
+import styles from "./caviarCoin.module.scss";
 import { Title, GrayBlock, Button } from "../../components";
 import { useTranslation } from "react-i18next";
 import coinbg from "../../assets/backgroudCoin.svg";

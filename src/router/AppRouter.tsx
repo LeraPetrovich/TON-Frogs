@@ -9,7 +9,7 @@ import {
   Roadmap,
   Partner,
 } from "../pages";
-import styles from "./route.style.module.scss";
+import styles from "./route.module.scss";
 import { Layout } from "../layout/Layout";
 
 const AppRouter: React.FunctionComponent = () => {
