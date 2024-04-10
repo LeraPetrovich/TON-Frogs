@@ -31,7 +31,7 @@
         "navigation navigation navigation"
         "container_logo link_text_footer_box contact_container_icons";
 
-      @media (max-width: 940px) {
+      @media (max-width: 1053px) {
         grid-template-columns: auto;
         grid-template-rows: auto;
         grid-template-areas:
@@ -49,6 +49,16 @@
         grid-area: navigation;
         display: flex;
         justify-content: center;
+
+        .menu_list {
+          a {
+            @media (max-width: 1053px) {
+              &:nth-child(5) {
+                margin-left: 0px;
+              }
+            }
+          }
+        }
       }
 
       .contact_container_icons {
@@ -58,7 +68,7 @@
         justify-content: flex-end;
         gap: 20px;
 
-        @media (max-width: 940px) {
+        @media (max-width: 1053px) {
           justify-content: center;
         }
 
@@ -73,7 +83,7 @@
         justify-content: flex-start;
         grid-area: container_logo;
 
-        @media (max-width: 940px) {
+        @media (max-width: 1053px) {
           justify-content: center;
         }
         .text_logo {

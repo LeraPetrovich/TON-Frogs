@@ -76,7 +76,7 @@ export const Footer: React.FC = () => {
           </Link>
           <div className={styles.footer_content_container}>
             <div className={styles.footer_content_menu}>
-              <Menu />
+              <Menu className={styles.menu_list} />
             </div>
             <div className={styles.contact_container_logo}>
               <Title text={t("basedOnTon")} className={styles.text_logo} />

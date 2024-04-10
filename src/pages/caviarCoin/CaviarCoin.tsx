@@ -89,7 +89,7 @@ export const CaviarCoin: React.FC = () => {
                   <div
                     className={styles.item_circle}
                     style={{ backgroundColor: item.color }}
-                  ></div>
+                  >%</div>
                   <p className={styles.item_text}>{item.text}</p>
                 </div>
               );

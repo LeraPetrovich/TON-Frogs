@@ -4,6 +4,7 @@ interface IButton {
   iconLeft?: string;
   onClick: () => void;
   className?: string;
+  message?: boolean;
 }
 
 export type { IButton };

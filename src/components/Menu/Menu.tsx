@@ -31,13 +31,14 @@ export const Menu: React.FC<IMenu> = ({ className, onClick }) => {
     },
     {
       id: 3,
-      link: "/bridge",
-      text: t("bridge"),
+      link: "/caviar_coin",
+      text: "Caviar Coin",
     },
     {
       id: 4,
-      link: "/caviar_coin",
-      text: "Caviar Coin",
+      link: "/bridge",
+      text: t("bridge"),
+      message: t("soon"),
     },
     {
       id: 5,
@@ -67,8 +68,11 @@ export const Menu: React.FC<IMenu> = ({ className, onClick }) => {
       onClick();
     }
     const item = e.currentTarget.dataset.item;
-    if (item && menuItems[parseInt(item)].message) {
-      e.preventDefault();
+    if (item) {
+      const menuItem = menuItems[parseInt(item)];
+      if (menuItem.link === "/store") {
+        e.preventDefault();
+      }
     }
     window.scrollTo({
       top: 0,

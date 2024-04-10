@@ -31,12 +31,14 @@ const buttonItems = [
     icon: GetGems,
     text: "GetGems",
     link: "https://getgems.io/tonfrogs",
+    message: true,
   },
   {
     id: 3,
     icon: OpenSea,
     text: "OpenSea",
     link: "https://opensea.io/",
+    message: true,
   },
   {
     id: 4,
@@ -76,6 +78,7 @@ export const AboutUs: React.FC = () => {
                       onClick={() => window.open(item.link, "_blank")}
                       text={item.text}
                       iconRight={item.icon}
+                      message={item.message}
                     />
                   );
                 })}
