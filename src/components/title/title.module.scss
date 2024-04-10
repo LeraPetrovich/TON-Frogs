@@ -6,10 +6,11 @@
   font-size: 70px;
   line-height: 110%;
   text-transform: uppercase;
-  background: linear-gradient(270deg, #36f5ff 0%, #0085ff 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: white;
+  // background: linear-gradient(270deg, #36f5ff 0%, #0085ff 100%);
+  // background-clip: text;
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
 
   @media (max-width: 768px) {
     font-size: 36px;

@@ -26,6 +26,11 @@ export const Fond: React.FC = () => {
   const [videoBodyHeight, setVideoBodyHeight] = useState<number[]>([]);
   const videoBodyRef = useRef<(HTMLDivElement | null)[]>([null, null, null]);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [loadedVideos, setLoadedVideos] = useState<Array<boolean>>([
+    false,
+    false,
+    false,
+  ]);
 
   useEffect(() => {
     const getWidth = () => {
@@ -77,6 +82,24 @@ export const Fond: React.FC = () => {
     },
   ];
 
+  const markVideoAsLoaded = (index: number) => {
+    setLoadedVideos((currentLoaded) => {
+      const newLoaded = [...currentLoaded];
+      newLoaded[index] = true;
+      return newLoaded;
+    });
+  };
+
+  useEffect(() => {
+    if (loadedVideos.every((status) => status === true)) {
+      videoBodyRef.current.forEach((videoElement) => {
+        if (videoElement && videoElement.children[0]) {
+          (videoElement.children[0] as HTMLVideoElement).play();
+        }
+      });
+    }
+  }, [loadedVideos]);
+
   return (
     <section className={styles.fond_wrapper}>
       <div className={styles.fond_main}>
@@ -100,7 +123,13 @@ export const Fond: React.FC = () => {
                 }}
                 ref={(element) => (videoBodyRef.current[index] = element)}
               >
-                <video autoPlay muted playsInline loop>
+                <video
+                  autoPlay
+                  muted
+                  playsInline
+                  loop
+                  onEnded={(e) => e.currentTarget.play()}
+                >
                   <source src={item.videoMp4} type='video/mp4; codecs="hvc1"' />
                   <source src={item.videoWebm} type="video/webm" />
                 </video>
@@ -143,12 +172,7 @@ export const Fond: React.FC = () => {
         </div>
         <Button
           text={t("joinTheFund")}
-          onClick={() =>
-            window.open(
-              "https://t.me/tonfrogs_bot",
-              "_blank"
-            )
-          }
+          onClick={() => window.open("https://t.me/tonfrogs_bot", "_blank")}
           className={styles.button}
         />
       </div>
