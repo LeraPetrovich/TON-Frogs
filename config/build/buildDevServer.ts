@@ -7,5 +7,7 @@ export const buildDevServer = (
   return {
     port: options.port ? options.port : 5002,
     open: true,
+    https: true,
+    host: 'frogs.websun-com.ru',
   };
 };
