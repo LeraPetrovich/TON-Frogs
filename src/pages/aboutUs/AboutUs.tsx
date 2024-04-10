@@ -9,6 +9,11 @@ import OpenSea from "../../assets/icons/OpenSea.svg";
 import Rarible from "../../assets/icons/Rarible.svg";
 import tonFrogsLogo from "../../assets/icons/ton_frogs_logo.svg";
 
+//images
+import jogerbg from "../../assets/joger_bg.png";
+import superFrogbg from "../../assets/bg_superfrog.png";
+import starwarsbg from "../../assets/starwars_bg.png";
+
 //video mp4
 import frogVideoAbout from "../../assets/video/mp4/major_600.mp4";
 import joggerFrogMp4 from "../../assets/video/mp4/jogger_600_safari.mp4";
@@ -79,6 +84,7 @@ export const AboutUs: React.FC = () => {
                 <div className={styles.video_item}>
                   <div
                     className={[styles.video_body, styles.superfrog].join(" ")}
+                    style={{ backgroundImage: `url(${superFrogbg})` }}
                   >
                     <video width="600" autoPlay muted playsInline loop>
                       <source
@@ -94,7 +100,10 @@ export const AboutUs: React.FC = () => {
                   </div>
                 </div>
                 <div className={styles.video_item}>
-                  <div className={[styles.video_body, styles.jogger].join(" ")}>
+                  <div
+                    className={[styles.video_body, styles.jogger].join(" ")}
+                    style={{ backgroundImage: `url(${jogerbg})` }}
+                  >
                     <video width="600" autoPlay muted playsInline loop>
                       <source
                         src={joggerFrogMp4}
@@ -111,6 +120,7 @@ export const AboutUs: React.FC = () => {
                 <div className={styles.video_item}>
                   <div
                     className={[styles.video_body, styles.starwars].join(" ")}
+                    style={{ backgroundImage: `url(${starwarsbg})` }}
                   >
                     <video width="600" autoPlay muted playsInline loop>
                       <source

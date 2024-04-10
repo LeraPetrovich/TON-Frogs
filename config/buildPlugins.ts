@@ -1,7 +1,9 @@
 import { Configuration } from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
 import { BuildOptions } from "./build/types";
+import path from "path";
 
 export const buildPlugins = (
   options: BuildOptions
@@ -16,5 +18,17 @@ export const buildPlugins = (
         filename: "css/[name].[contenthash:8].css",
         chunkFilename: "css/[name].[contenthash:8].css",
       }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "../public/favicon.ico"),
+          to: path.resolve(__dirname, "../build"),
+        },
+        {
+          from: path.resolve(__dirname, "../public/manifest.json"),
+          to: path.resolve(__dirname, "../build"),
+        },
+      ],
+    }),
   ].filter(Boolean);
 };

@@ -60,8 +60,8 @@ export const buildLoaders = (options: BuildOptions): ModuleOptions["rules"] => {
     ],
   };
 
-  const pngLoader = {
-    test: /\.png$/,
+  const imageLoader = {
+    test: /\.(png|jpg|jpeg|gif|svg)$/,
     use: [
       {
         loader: "file-loader",
@@ -72,16 +72,10 @@ export const buildLoaders = (options: BuildOptions): ModuleOptions["rules"] => {
     ],
   };
 
-  const svgLoader = {
-    test: /\.svg$/,
-    use: [
-      {
-        loader: "file-loader",
-        options: {
-          name: "images/[name].[hash:8].[ext]",
-        },
-      },
-    ],
+  const jsonLoader = {
+    test: /\.json$/,
+    loader: "json-loader",
+    type: "javascript/auto",
   };
 
   return [
@@ -90,7 +84,7 @@ export const buildLoaders = (options: BuildOptions): ModuleOptions["rules"] => {
     tsLoader,
     fontLoader,
     videoLoader,
-    pngLoader,
-    svgLoader,
+    imageLoader,
+    jsonLoader,
   ];
 };

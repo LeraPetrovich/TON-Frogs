@@ -5,6 +5,7 @@ import { Title } from "../../components";
 import definderMp4 from "../../assets/video/mp4/definder_600.mp4";
 import definderWebm from "../../assets/video/web/definder_600.webm";
 import { Button } from "../../components";
+import videoBg from "../../assets/definder_bg.png";
 
 export const Partner: React.FC = () => {
   const { t } = useTranslation();
@@ -29,7 +30,10 @@ export const Partner: React.FC = () => {
             <source src={definderMp4} type='video/mp4; codecs="hvc1"' />
             <source src={definderWebm} type="video/webm" />
           </video>
-          <div className={styles.video_bg}></div>
+          <div
+            className={styles.video_bg}
+            style={{ backgroundImage: `url(${videoBg})` }}
+          ></div>
         </div>
       </div>
       <Button

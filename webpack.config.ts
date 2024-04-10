@@ -1,22 +1,9 @@
-// const path = require("path");
-
-// module.exports = {
-//   module: {
-//     rules: [
-//       {
-//         test: /\.scss$/,
-//         use: ["style-loader", "css-loader", "sass-loader"],
-//         include: path.resolve(__dirname, "src"),
-//       },
-//     ],
-//   },
-// };
-
 import path from "path";
 import webpack from "webpack";
 
 import { buildWebPack } from "./config/build/buildWebPack";
 import { BuildMode, BuildPath } from "./config/build/types";
+
 
 interface EnvTypes {
   mode: BuildMode;
@@ -29,6 +16,7 @@ export default (env: EnvTypes) => {
     entry: path.resolve(__dirname, "src", "index.tsx"),
     html: path.resolve(__dirname, "public", "index.html"),
   };
+
   const config: webpack.Configuration = buildWebPack({
     port: env.port ?? 3000,
     mode: env.mode ?? "development",

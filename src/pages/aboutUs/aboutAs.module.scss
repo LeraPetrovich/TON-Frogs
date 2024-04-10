@@ -123,13 +123,11 @@
 
               &.jogger {
                 z-index: 3;
-                background-image: url(../../assets/joger_bg.png);
               }
               &.superfrog {
                 transform: rotate(-14deg);
                 z-index: 2;
                 top: 300px;
-                background-image: url(../../assets/bg_superfrog.png);
                 @media (max-width: 1200px) {
                   top: 0px;
                   transform: rotate(0deg);
@@ -140,7 +138,6 @@
                 transform: rotate(12deg);
                 z-index: 2;
                 top: -180px;
-                background-image: url(../../assets/starwars_bg.png);
                 @media (max-width: 1200px) {
                   top: 0px;
                   transform: rotate(0deg);
