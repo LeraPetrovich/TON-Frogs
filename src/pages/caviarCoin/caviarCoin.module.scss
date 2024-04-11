@@ -55,8 +55,8 @@
       height: 700px;
       margin: 0 auto;
       @media (max-width: 768px) {
-        max-width: 433px;
-        max-height: 433px;
+        max-width: 360px;
+        max-height: 360px;
       }
       .coin_image {
         position: relative;
@@ -74,8 +74,8 @@
           z-index: 5;
           max-width: 660px;
           @media (max-width: 768px) {
-            max-width: 433px;
-            max-height: 433px;
+            max-width: 360px;
+            max-height: 360px;
           }
         }
       }
@@ -151,7 +151,7 @@
       width: 100%;
       align-self: center;
       @media (max-width: 768px) {
-        max-width: 336px;
+        max-width: 280px;
       }
     }
     .points_box {

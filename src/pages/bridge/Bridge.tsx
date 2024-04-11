@@ -8,12 +8,12 @@ import openSea from "../../assets/icons/OpenSea.svg";
 
 const linksIcons = [
   {
-    icon: rarible,
-    text: "Rarible",
-  },
-  {
     icon: openSea,
     text: "OpenSea",
+  },
+  {
+    icon: rarible,
+    text: "Rarible",
   },
 ];
 
