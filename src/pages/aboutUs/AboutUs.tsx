@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./aboutAs.module.scss";
 import { useTranslation } from "react-i18next";
-import { Title, Button, GrayBlock } from "../../components";
+import { Title, Button, GrayBlock, Slider } from "../../components";
 
 //icons
 import GetGems from "../../assets/icons/GG.svg";
@@ -48,8 +48,45 @@ const buttonItems = [
   },
 ];
 
+const slides = [
+  {
+    videoType: "jogger",
+    mp4: joggerFrogMp4,
+    webm: joggerFrogWeb,
+    bgImage: jogerbg,
+    logo: tonFrogsLogo,
+  },
+  {
+    videoType: "starwars",
+    mp4: starwarsMp4,
+    webm: starwarsWeb,
+    bgImage: starwarsbg,
+    logo: tonFrogsLogo,
+  },
+  {
+    videoType: "superfrog",
+    mp4: superfrogMp4,
+    webm: superfrogWeb,
+    bgImage: superFrogbg,
+    logo: tonFrogsLogo,
+  },
+];
+
 export const AboutUs: React.FC = () => {
   const { t } = useTranslation();
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section>
       <div className={styles.about_wrapper}>
@@ -83,62 +120,68 @@ export const AboutUs: React.FC = () => {
                   );
                 })}
               </div>
-              <div className={styles.videos}>
-                <div className={styles.video_item}>
-                  <div
-                    className={[styles.video_body, styles.superfrog].join(" ")}
-                    style={{ backgroundImage: `url(${superFrogbg})` }}
-                  >
-                    <video width="600" autoPlay muted playsInline loop>
-                      <source
-                        src={superfrogMp4}
-                        type='video/mp4; codecs="hvc1"'
-                      />
-                      <source src={superfrogWeb} type="video/webm" />
-                    </video>
-                    <div className={styles.video_footer}>
-                      <span className={styles.footer_title}>TON Frogs</span>
-                      <img src={tonFrogsLogo} alt="Ton Frogs Logo" />
+              {screenWidth > 377 && (
+                <div className={styles.videos}>
+                  <div className={styles.video_item}>
+                    <div
+                      className={[styles.video_body, styles.superfrog].join(
+                        " "
+                      )}
+                      style={{ backgroundImage: `url(${superFrogbg})` }}
+                    >
+                      <video width="600" autoPlay muted playsInline loop>
+                        <source
+                          src={superfrogMp4}
+                          type='video/mp4; codecs="hvc1"'
+                        />
+                        <source src={superfrogWeb} type="video/webm" />
+                      </video>
+                      <div className={styles.video_footer}>
+                        <span className={styles.footer_title}>TON Frogs</span>
+                        <img src={tonFrogsLogo} alt="Ton Frogs Logo" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={styles.video_item}>
+                    <div
+                      className={[styles.video_body, styles.jogger].join(" ")}
+                      style={{ backgroundImage: `url(${jogerbg})` }}
+                    >
+                      <video width="600" autoPlay muted playsInline loop>
+                        <source
+                          src={joggerFrogMp4}
+                          type='video/mp4; codecs="hvc1"'
+                        />
+                        <source src={joggerFrogWeb} type="video/webm" />
+                      </video>
+                      <div className={styles.video_footer}>
+                        <span className={styles.footer_title}>TON Frogs</span>
+                        <img src={tonFrogsLogo} alt="Ton Frogs Logo" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={styles.video_item}>
+                    <div
+                      className={[styles.video_body, styles.starwars].join(" ")}
+                      style={{ backgroundImage: `url(${starwarsbg})` }}
+                    >
+                      <video width="600" autoPlay muted playsInline loop>
+                        <source
+                          src={starwarsMp4}
+                          type='video/mp4; codecs="hvc1"'
+                        />
+                        <source src={starwarsWeb} type="video/webm" />
+                      </video>
+                      <div className={styles.video_footer}>
+                        <span className={styles.footer_title}>TON Frogs</span>
+                        <img src={tonFrogsLogo} alt="Ton Frogs Logo" />
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className={styles.video_item}>
-                  <div
-                    className={[styles.video_body, styles.jogger].join(" ")}
-                    style={{ backgroundImage: `url(${jogerbg})` }}
-                  >
-                    <video width="600" autoPlay muted playsInline loop>
-                      <source
-                        src={joggerFrogMp4}
-                        type='video/mp4; codecs="hvc1"'
-                      />
-                      <source src={joggerFrogWeb} type="video/webm" />
-                    </video>
-                    <div className={styles.video_footer}>
-                      <span className={styles.footer_title}>TON Frogs</span>
-                      <img src={tonFrogsLogo} alt="Ton Frogs Logo" />
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.video_item}>
-                  <div
-                    className={[styles.video_body, styles.starwars].join(" ")}
-                    style={{ backgroundImage: `url(${starwarsbg})` }}
-                  >
-                    <video width="600" autoPlay muted playsInline loop>
-                      <source
-                        src={starwarsMp4}
-                        type='video/mp4; codecs="hvc1"'
-                      />
-                      <source src={starwarsWeb} type="video/webm" />
-                    </video>
-                    <div className={styles.video_footer}>
-                      <span className={styles.footer_title}>TON Frogs</span>
-                      <img src={tonFrogsLogo} alt="Ton Frogs Logo" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              )}
+
+              {screenWidth <= 377 && <Slider slides={slides} />}
             </div>
           </div>
         </div>
