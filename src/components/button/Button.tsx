@@ -15,9 +15,10 @@ export const Button: React.FC<IButton> = ({
   return (
     <button onClick={onClick} className={`${styles.button} ${className || ""}`}>
       {iconRight && <img src={iconRight} alt="icon_button" />}
-      {text}
-      {iconLeft && <img src={iconLeft} alt="icon_button" />}
+      <span className={styles.text_button}>{text}
       {message && <span className={styles.message}>{t("soon")}</span>}
+      </span>
+      {iconLeft && <img src={iconLeft} alt="icon_button" />}
     </button>
   );
 };
