@@ -12,10 +12,6 @@
     .slide {
       position: relative;
       flex: 1;
-      @media (max-width: 1200px) {
-        min-width: 397px;
-        height: 550px;
-      }
       @media (max-width: 768px) {
         min-width: 322px;
         height: 550px;
