@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./header.module.scss";
-import logoFrog from "../../assets/icons/logo-footer-frog.svg";
 import { Menu } from "../menu/Menu";
 import { LanguageSwitcher } from "../languageSwitcher/LanguageSwitcher";
 import stylesGlobal from "../../router/route.module.scss";
 import { Link } from "react-router-dom";
+
+//video
+import logoMp4 from "../../assets/video/mp4/logo_300_safari.mp4";
+import logoWebm from "../../assets/video/web/logo_300_chrome.webm";
 
 export const Header: React.FC = () => {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
@@ -74,7 +77,12 @@ export const Header: React.FC = () => {
         <div className={styles.header_content}>
           <div className={styles.header_menu}>
             <Link to={"/"} onClick={handleClickLink}>
-              <img src={logoFrog} alt="logo" className={styles.logo} />
+              <div className={styles.logo}>
+                <video autoPlay muted playsInline loop>
+                  <source src={logoMp4} type='video/mp4; codecs="hvc1"' />
+                  <source src={logoWebm} type="video/webm" />
+                </video>
+              </div>
             </Link>
             <Menu className={styles.menu} />
           </div>

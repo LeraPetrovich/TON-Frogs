@@ -31,7 +31,6 @@ const buttonItems = [
     icon: GetGems,
     text: "GetGems",
     link: "https://getgems.io/tonfrogs",
-    message: true,
   },
   {
     id: 3,
@@ -45,10 +44,18 @@ const buttonItems = [
     icon: Rarible,
     text: "Rarible",
     link: "https://rarible.com/",
+    message: true,
   },
 ];
 
 const slides = [
+  {
+    videoType: "superfrog",
+    mp4: superfrogMp4,
+    webm: superfrogWeb,
+    bgImage: superFrogbg,
+    logo: tonFrogsLogo,
+  },
   {
     videoType: "jogger",
     mp4: joggerFrogMp4,
@@ -61,13 +68,6 @@ const slides = [
     mp4: starwarsMp4,
     webm: starwarsWeb,
     bgImage: starwarsbg,
-    logo: tonFrogsLogo,
-  },
-  {
-    videoType: "superfrog",
-    mp4: superfrogMp4,
-    webm: superfrogWeb,
-    bgImage: superFrogbg,
     logo: tonFrogsLogo,
   },
 ];
