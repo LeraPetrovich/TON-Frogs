@@ -13,6 +13,13 @@
     display: flex;
     flex-direction: column;
     position: relative;
+
+    .title {
+      @media (max-width: 768px) {
+        font-size: 28px;
+      }
+    }
+
     .title_block {
       z-index: 10;
       padding: 0 97px;
