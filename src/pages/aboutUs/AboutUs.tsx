@@ -15,7 +15,7 @@ import superFrogbg from "../../assets/bg_superfrog.png";
 import starwarsbg from "../../assets/starwars_bg.png";
 
 //video mp4
-import frogVideoAbout from "../../assets/video/mp4/major_600.mp4";
+import frogVideoAbout from "../../assets/video/mp4/major_600x600_safari.mp4";
 import joggerFrogMp4 from "../../assets/video/mp4/jogger_600_safari.mp4";
 import starwarsMp4 from "../../assets/video/mp4/starwars_600_safari.mp4";
 import superfrogMp4 from "../../assets/video/mp4/superfrog_600_safari.mp4";
@@ -120,7 +120,7 @@ export const AboutUs: React.FC = () => {
                   );
                 })}
               </div>
-              {screenWidth > 377 && (
+              {screenWidth > 768 && (
                 <div className={styles.videos}>
                   <div className={styles.video_item}>
                     <div
@@ -181,7 +181,7 @@ export const AboutUs: React.FC = () => {
                 </div>
               )}
 
-              {screenWidth <= 377 && <Slider slides={slides} />}
+              {screenWidth <= 768 && <Slider slides={slides} />}
             </div>
           </div>
         </div>
