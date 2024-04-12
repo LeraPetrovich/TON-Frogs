@@ -22,28 +22,36 @@ export const CaviarCoin: React.FC = () => {
 
   const chartInformationItem = [
     {
-      text: "СеХ/DeХ listing",
+      text: "5,500,000 $CAVI - Staking NFT TON Frogs",
+      color: "#FFFFFF",
+    },
+    {
+      text: "5,000,000 $CAVI - Fairlaunch",
       color: "#024873",
     },
     {
-      text: "Fairlaunch",
-      color: "#0378a6",
+      text: "4,500,000 $CAVI - Listing DeX DeDust",
+      color: "#0378A6",
     },
     {
-      text: "Staking NFT TON Frogs ",
-      color: "#0f9bf2",
+      text: "4,500,000 $CAVI - Subsequent listings DeX & CeX.",
+      color: "#0F9BF2",
     },
     {
-      text: t("team"),
-      color: "#94e9f2",
+      text: `2,500,000 $CAVI - ${t("team")}`,
+      color: "#00B7FF",
     },
     {
-      text: t("marketing"),
-      color: "#35f2f2",
+      text: `1,500,000 $CAVI - ${t("marketing")}`,
+      color: "#35F2F2",
     },
     {
-      text: t("tonFrogsFoundation"),
-      color: "#e8e8e8",
+      text: `1,000,000 $CAVI - ${t("tonFrogsFoundation")}`,
+      color: "#94E9F2",
+    },
+    {
+      text: `500,000 $CAVI - Boosting pools and rewards`,
+      color: "#D2FAFE",
     },
   ];
 
@@ -89,7 +97,9 @@ export const CaviarCoin: React.FC = () => {
                   <div
                     className={styles.item_circle}
                     style={{ backgroundColor: item.color }}
-                  >%</div>
+                  >
+                    %
+                  </div>
                   <p className={styles.item_text}>{item.text}</p>
                 </div>
               );

@@ -73,6 +73,10 @@
           transform: translateX(-50%);
           z-index: 5;
           max-width: 660px;
+
+          @media (max-width: 950px) {
+            max-width: 500px;
+          }
           @media (max-width: 768px) {
             max-width: 360px;
             max-height: 360px;
@@ -84,8 +88,13 @@
         top: 47%;
         transform: translateY(-47%);
         max-width: 1100px;
+        @media (max-width: 950px) {
+          top: 35%;
+          max-width: 900px;
+        }
         @media (max-width: 768px) {
           max-width: 700px;
+          top: 47%;
         }
       }
     }
@@ -104,6 +113,9 @@
     @media (max-width: 1075px) {
       flex-direction: column;
       align-items: center;
+    }
+    @media (max-width: 950px) {
+      margin-top: 0px;
     }
     @media (max-width: 768px) {
       gap: 26px;
@@ -150,6 +162,9 @@
       max-width: 530px;
       width: 100%;
       align-self: center;
+      @media (max-width: 950px) {
+        max-width: 400px;
+      }
       @media (max-width: 768px) {
         max-width: 280px;
       }
@@ -189,11 +204,10 @@
             font-size: 90px;
             color: #fff;
             @media (max-width: 768px) {
-              font-size: 50px;
+              font-size: 37px;
             }
           }
           .poin_volume_text {
-            margin: 0;
             align-self: self-end;
             font-weight: 400;
             font-size: 24px;
@@ -203,7 +217,7 @@
             color: #dcdcdc;
             margin-bottom: 22px;
             @media (max-width: 768px) {
-              font-size: 24px;
+              font-size: 17px;
             }
           }
         }
@@ -222,7 +236,7 @@
           align-items: center;
           gap: 19px;
           .item_circle {
-            width: 32px;
+            min-width: 32px;
             height: 32px;
             border-radius: 100%;
             display: flex;
@@ -239,7 +253,7 @@
             color: #fff;
 
             @media (max-width: 768px) {
-              font-size: 24px;
+              font-size: 15px;
               line-height: 175%;
             }
           }

@@ -17,7 +17,7 @@ import fondbg from "../../assets/fond_bg.png";
 import ggIcon from "../../assets/icons/GG.svg";
 import ggIconDart from "../../assets/icons/GetGemsDark.svg";
 
-import ironFrogMp4 from "../../assets/video/mp4/ironfrog_600.mp4";
+import ironFrogMp4 from "../../assets/video/mp4/ironfrog_600x600_safari.mp4";
 import ironFrogWebm from "../../assets/video/web/ironfrog_600.webm";
 
 export const Fond: React.FC = () => {

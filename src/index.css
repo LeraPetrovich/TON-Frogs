@@ -27,5 +27,11 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 652px;
+  height: 560px;
+}
+
+@media (max-width: 520px) {
+  .carousel .slider-wrapper.axis-horizontal .slider .slide {
+    height: 460px;
+  }
 }

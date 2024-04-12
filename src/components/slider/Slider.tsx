@@ -17,6 +17,7 @@ export const Slider: React.FC<ISlider> = ({ slides }) => {
       interval={5000}
       infiniteLoop={true}
       showStatus={false}
+      swipeable={false}
     >
       {slides.map((slide: any, index: number) => (
         <div className={`${styles.slide_frog}`} key={index}>
