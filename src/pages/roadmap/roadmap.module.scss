@@ -18,6 +18,9 @@
     @media (max-width: 768px) {
       align-self: self-start;
     }
+    @media (max-width: 520px) {
+      font-size: 34px;
+    }
   }
   .roadmap_content {
     position: relative;
@@ -74,6 +77,12 @@
             font-size: 16px;
             line-height: 156%;
             color: #e2e2e2;
+            svg {
+              @media (max-width: 520px) {
+                width: 25px;
+                height: 25px;
+              }
+            }
 
             &.active {
               box-shadow: 0 0 10px 0 #0497ff;
@@ -112,6 +121,9 @@
               font-weight: 500;
               font-size: 18px;
               line-height: 156%;
+            }
+            @media (max-width: 520px) {
+              font-size: 15px;
             }
           }
         }
