@@ -14,31 +14,31 @@ export const CaviarCoin: React.FC = () => {
 
   useEffect(() => {
     if (i18n.language === "ru") {
-      setLinkTelegram("https://t.me/tonfrogs");
+      setLinkTelegram("https://t.me/CaviarCoin");
     } else {
-      setLinkTelegram("https://t.me/frogs");
+      setLinkTelegram("https://t.me/CaviarCoin");
     }
   }, [i18n.language]);
 
   const chartInformationItem = [
     {
-      text: "5,500,000 $CAVI - Staking NFT TON Frogs",
+      text: "7,000,000 $CAVI - Fairlaunch",
       color: "#FFFFFF",
     },
     {
-      text: "5,000,000 $CAVI - Fairlaunch",
+      text: `5,500,000 $CAVI - ${t("staking")}`,
       color: "#024873",
     },
     {
-      text: "4,500,000 $CAVI - Listing DeX DeDust",
+      text: `3,780,000 $CAVI - ${t("listing")}`,
       color: "#0378A6",
     },
     {
-      text: "4,500,000 $CAVI - Subsequent listings DeX & CeX.",
+      text: `3,150,000 $CAVI - ${t("DeXCeX")}`,
       color: "#0F9BF2",
     },
     {
-      text: `2,500,000 $CAVI - ${t("team")}`,
+      text: `2,520,000 $CAVI - ${t("team")}`,
       color: "#00B7FF",
     },
     {
@@ -50,7 +50,7 @@ export const CaviarCoin: React.FC = () => {
       color: "#94E9F2",
     },
     {
-      text: `500,000 $CAVI - Boosting pools and rewards`,
+      text: `550,000 $CAVI - ${t("boosting")}`,
       color: "#D2FAFE",
     },
   ];
