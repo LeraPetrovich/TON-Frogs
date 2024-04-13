@@ -153,7 +153,7 @@ export const Fond: React.FC = () => {
       <div className={styles.description_fond_box}>
         <div className={styles.description_fond_text_box}>
           <div className={styles.title_block}>{t("jointFund")}</div>
-          <div className={styles.text_block}>{t("jointFund")}</div>
+          <div className={styles.text_block}>{t("ourGoal")}</div>
         </div>
         <div className={styles.list_container}>
           <div className={styles.list_box}>

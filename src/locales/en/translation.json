@@ -22,7 +22,7 @@
   "totalVolume": "total volume",
   "marketing": "Marketing",
   "tonFrogsFoundation": "TON Frogs Фонд",
-  "formReceiptTitle": "$CAVI tokens can be obtained through TON Frogs NFT Staking.",
+  "formReceiptTitle": "$CAVI tokens can be obtained through TON Frogs NFT Staking",
   "dexExchanges": "or buy on DEX exchanges",
   "soon": "[soon]",
   "store": "Store",
@@ -67,7 +67,8 @@
   "releasePromoVideosTONFrogs": "Release of a series of promo videos TON Frogs",
   "offlineEventTONFrogsCommunity": "Offline event TON Frogs Community",
   "staking": "Staking NFT TON Frogs",
-  "listing":"Listing DeX DeDust",
-  "DeXCeX":"Subsequent listings DeX & CeX.",
-  "boosting":"Boosting pools and rewards"
+  "listing": "Listing DeX DeDust",
+  "DeXCeX": "Subsequent listings DeX & CeX",
+  "boosting": "Boosting pools and rewards",
+  "ourGoal": "Our goal is to develop the NFT collection. \nKey objectives of the fund:"
 }
