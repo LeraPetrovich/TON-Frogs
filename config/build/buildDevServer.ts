@@ -8,6 +8,6 @@ export const buildDevServer = (
     port: options.port ? options.port : 5002,
     open: true,
     https: true,
-    host: 'frogs.websun-com.ru',
+    host: "hosting.timeweb.ru",
   };
 };
