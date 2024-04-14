@@ -8,6 +8,7 @@ import {
   Team,
   Roadmap,
   Partner,
+  NotFound,
 } from "../pages";
 import styles from "./route.module.scss";
 import { Layout } from "../layout/Layout";
@@ -76,6 +77,16 @@ const AppRouter: React.FunctionComponent = () => {
             <Layout>
               <div className={styles.container}>
                 <Partner />
+              </div>
+            </Layout>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <Layout>
+              <div className={styles.container}>
+                <NotFound />
               </div>
             </Layout>
           }

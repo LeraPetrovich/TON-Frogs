@@ -8,6 +8,10 @@ export const buildDevServer = (
     port: options.port ? options.port : 5002,
     open: true,
     https: true,
-    host: "hosting.timeweb.ru",
+    historyApiFallback: {
+      index: "/index.html",
+      disableDotRule: true,
+    },
+    host: "tonfrogs.org",
   };
 };

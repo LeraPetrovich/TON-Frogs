@@ -28,6 +28,10 @@ export const buildPlugins = (
           from: path.resolve(__dirname, "../public/manifest.json"),
           to: path.resolve(__dirname, "../build"),
         },
+        {
+          from: path.resolve(__dirname, "../.htaccess"),
+          to: path.resolve(__dirname, "../build"),
+        },
       ],
     }),
   ].filter(Boolean);
