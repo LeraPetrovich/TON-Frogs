@@ -16,14 +16,14 @@ import starwarsbg from "../../assets/starwars_bg.png";
 
 //video mp4
 import frogVideoAbout from "../../assets/video/mp4/major_600x600_safari.mp4";
-import joggerFrogMp4 from "../../assets/video/mp4/jogger_600_safari.mp4";
-import starwarsMp4 from "../../assets/video/mp4/starwars_600_safari.mp4";
-import superfrogMp4 from "../../assets/video/mp4/superfrog_600_safari.mp4";
+import joggerFrogMp4 from "../../assets/video/mp4/deadpool_600x600_safari.mp4";
+import starwarsMp4 from "../../assets/video/mp4/batfrog_600x600_safari.mp4";
+import superfrogMp4 from "../../assets/video/mp4/catfrog_600x600_safari.mp4";
 //video web
 import frogVideoAboutWeb from "../../assets/video/web/major_600.webm";
-import joggerFrogWeb from "../../assets/video/web/jogger_600_chrome.webm";
-import starwarsWeb from "../../assets/video/web/starwars_600_chrome.webm";
-import superfrogWeb from "../../assets/video/web/superfrog_600_chrome.webm";
+import joggerFrogWeb from "../../assets/video/web/deadpool_600x600_chrome.webm";
+import starwarsWeb from "../../assets/video/web/batfrog_600x600_chrome.webm";
+import superfrogWeb from "../../assets/video/web/catfrog_600x600_chrome.webm";
 
 const buttonItems = [
   {
