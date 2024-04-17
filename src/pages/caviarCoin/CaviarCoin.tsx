@@ -27,31 +27,31 @@ export const CaviarCoin: React.FC = () => {
     },
     {
       text: `5,500,000 $CAVI - ${t("staking")}`,
-      color: "#024873",
+      color: " #d2fafe",
     },
     {
       text: `3,780,000 $CAVI - ${t("listing")}`,
-      color: "#0378A6",
+      color: "#7fdbff",
     },
     {
       text: `3,150,000 $CAVI - ${t("DeXCeX")}`,
-      color: "#0F9BF2",
+      color: "#35f2f2",
     },
     {
       text: `2,520,000 $CAVI - ${t("team")}`,
-      color: "#00B7FF",
+      color: "#00b7ff",
     },
     {
-      text: `1,500,000 $CAVI - ${t("marketing")}`,
-      color: "#35F2F2",
+      text: `1,550,000 $CAVI - ${t("marketing")}`,
+      color: "#0f9bf2",
     },
     {
       text: `1,000,000 $CAVI - ${t("tonFrogsFoundation")}`,
-      color: "#94E9F2",
+      color: "#0378a6",
     },
     {
-      text: `550,000 $CAVI - ${t("boosting")}`,
-      color: "#D2FAFE",
+      text: `500,000 $CAVI - ${t("boosting")}`,
+      color: "#024873",
     },
   ];
 
