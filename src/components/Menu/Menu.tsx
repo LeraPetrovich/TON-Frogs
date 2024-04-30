@@ -42,7 +42,7 @@ export const Menu: React.FC<IMenu> = ({ className, onClick }) => {
     },
     {
       id: 5,
-      link: "/fond",
+      link: "/fund",
       text: t("fund"),
     },
     {

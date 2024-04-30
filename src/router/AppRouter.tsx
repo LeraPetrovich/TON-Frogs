@@ -46,7 +46,7 @@ const AppRouter: React.FunctionComponent = () => {
           }
         />
         <Route
-          path="/fond"
+          path="/fund"
           element={
             <Layout>
               <Fond />

@@ -62,11 +62,11 @@ export const Roadmap: React.FC = () => {
     },
     {
       text: t("startPRCampaign"),
-      active: false,
+      active: true,
     },
     {
       text: t("fairlaunchCAVI"),
-      active: false,
+      active: true,
     },
     {
       text: t("sexDexListingCAVI"),
