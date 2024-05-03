@@ -121,7 +121,7 @@ export const CaviarCoin: React.FC = () => {
               />
               <Button
                 className={styles.button_form}
-                onClick={() => window.open("https://ston.fi/", "_blank")}
+                onClick={() => window.open("https://app.ston.fi/swap?chartVisible=false&ft=TON&tt=CAVI", "_blank")}
                 text="ston.fi"
               />
             </div>
