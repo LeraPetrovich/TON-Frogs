@@ -45,7 +45,7 @@ export const Team: React.FC = () => {
       video_mp4: starwarsMp4,
       video_web: starwarsWeb,
       status: "3D Animator",
-      name: "Alex Glintveyn",
+      name: "FySyde (Alex Korshun)",
     },
     {
       id: 5,
